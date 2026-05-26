@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <meta http-equiv="x-ua-compatible" content="IE=EDGE">
+  <title>Logiciel tableur - L'hybride est relativement absolu</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="S&eacute;bastien Fasbender ">
+  <meta name="keywords" content>
+  <meta name="date" content="17/02/2016">
+  <link rel="stylesheet" type="text/css" href="../wdgt/scCodeMgr/scCodeMgr.css">
+  <link rel="stylesheet" type="text/css" href="../wdgt/scImgMgr/scImgMgr.css">
+  <script type="text/JavaScript">
+/*0*/ var scServices = {};
+/*1*/ scServices["scLoad"] = {loadFromRoot:function(pUrl){window.location.href="../"+pUrl;}, getPathFromRoot:function(pPath){return "../"+pPath;}, getUrlFromRoot:function(pHref){if(!this.fRootOffset) this.fRootOffset = scCoLib.hrefBase().length-28; return pHref.substring(this.fRootOffset);},getRootUrl:function(){if(!this.fRootUrl) this.fRootUrl = scCoLib.hrefBase().substring(0,scCoLib.hrefBase().length-29); return this.fRootUrl;}};
+</script>
+  <!--[if lt IE 9]><script type="text/JavaScript" src="../wdgt/html5shiv/html5shiv.js"></script><![endif]--><script type="text/JavaScript" src="../lib-sm/scCoLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sm/scPaLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sm/scSiLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sm/scTiLib.js"></script>
+  <script type="text/JavaScript" src="../svc/scorm.js"></script>
+  <script type="text/JavaScript" src="../lib-sm/scMapMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-sm/scDynUiMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-sm/scTooltipMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-sm/scDragMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-sma/scAssmntMgr.js"></script>
+  <script type="text/JavaScript" src="../svc/scSearch/scSearch.js"></script>
+  <script type="text/JavaScript" src="../wdgt/tplMgr/tplMgr.js"></script>
+  <script type="text/JavaScript" src="../wdgt/dynSizes/dynSizes.js"></script>
+  <script type="text/JavaScript" src="../wdgt/outMgr/outMgr.js"></script>
+  <script type="text/JavaScript" src="../wdgt/scCodeMgr/scCodeMgr.js"></script>
+  <script type="text/JavaScript" src="../wdgt/searchMgr/searchMgr.js"></script>
+  <script type="text/JavaScript" src="../wdgt/scImgMgr/scImgMgr.js"></script>
+  <script type="text/JavaScript">
+/*0*/ try{var vCurrDir = scCoLib.hrefBase().substring(0,scCoLib.hrefBase().lastIndexOf("/")+1); if(window.opener && window.opener.location.href.lastIndexOf(vCurrDir, vCurrDir.length)==0 && window.opener.scServices) scServices = window.opener.scServices; else if(window.parent && window.parent.location.href.lastIndexOf(vCurrDir, vCurrDir.length)==0 && window.parent.scServices) scServices = window.parent.scServices;}catch(e){}
+scCodeMgr.registerCode("des:div.code");
+
+scImgMgr.registerGallery("des:div.galFra");
+
+scImgMgr.registerZoom("des:a.imgZoom",{toolbar:1,mag:1,titlePath:"par:/nsi:/chi:span.capTi"});
+
+</script>
+  <meta name="generator" content="SCENARI 4.1.11 / Opale 3.5.016 - http://scenari-platform.org/opale">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="revision" content="2016-10-03 07:56">
+  <link rel="start" href="tableur_web.html" title="Logiciel tableur">
+  <script type="text/JavaScript">
+outMgr.declareOutline("2_tableur.txt");
+	</script>
+  <link type="text/css" rel="stylesheet" href="../skin/css/html.css" media="all">
+  <link type="text/css" rel="stylesheet" href="../skin/css/struct_page.css" media="screen">
+  <link type="text/css" rel="stylesheet" href="../skin/css/buttons.css" media="screen">
+  <link type="text/css" rel="stylesheet" href="../skin/css/mnu_page.css" media="screen">
+  <link type="text/css" rel="stylesheet" href="../skin/css/mnu_child.css" media="screen">
+  <link type="text/css" rel="stylesheet" href="../skin/css/transf.css" media="all">
+  <link type="text/css" rel="stylesheet" href="../skin/css/indexes.css">
+  <link type="text/css" rel="stylesheet" href="../skin/css/assmnt.css">
+  <link type="text/css" rel="stylesheet" href="../skin/css/assmnt_train.css">
+  <link type="text/css" rel="stylesheet" href="../skin/css/sub_windows.css" media="screen">
+  <link type="text/css" rel="stylesheet" href="../skin/css/search.css" media="screen">
+  <!--[if IE]><link type="text/css" rel="stylesheet" href="../skin/css/ie.css" media="screen"/><![endif]-->
+  <!--[if lt IE 7]><link type="text/css" rel="stylesheet" href="../skin/css/ie6_page.css" media="screen"/><link type="text/css" rel="stylesheet" href="../skin/css/ie6_sub_windows.css" media="all"/><![endif]--><link type="text/css" rel="stylesheet" href="../skin/css/print.css" media="print">
+ </head>
+ <body>
+  <div id="tplFra"><div id="tplTop"><ul id="accessibility"><li class="tplWaiContent"><a class="waiBtn contentWaiBtn" href="#content" title="aller au contenu"><span>contenu</span></a></li><li class="tplWaiMenu"><a class="waiBtn menuWaiBtn" href="#menu" title="aller au menu"><span>menu</span></a></li><li class="tplWaiNav"><a class="waiBtn navWaiBtn" href="#navigation" title="aller &agrave; la navigation"><span>navigation</span></a></li><li class="tplWaiTools"><a class="waiBtn toolsWaiBtn" href="#tools" title="aller aux outils"><span>outils</span></a></li><li class="tplWaiFoot"><a class="waiBtn footWaiBtn" href="#footer" title="aller au pied de page"><span>pied de page</span></a></li></ul><noscript>Attention, votre navigateur ne supporte pas le javascript ou celui-ci a &eacute;t&eacute; d&eacute;sactiv&eacute;. Certaines fonctionnalit&eacute;s de ce module sont restreintes.</noscript><h1 id="titleRoot"><span>Logiciel tableur</span></h1></div><div id="tplLft"><hr class="hidden"><a id="tools" class="accessAnc" name="tools" href="#tools"></a><strong class="hidden">Mode&nbsp;: </strong><ul class="mnuMode"><li><span class="playBtnSel"><img alt="Cours" src="../skin/img/btn/playSel.png" class="btnImg"><span class="btnLbl">Cours</span></span></li><li><a class="modeBtn toolsBtn saveBtn " target="_self" href="tableur_web_1.html" title="Outils transverses"><span><img alt="Outils" src="../skin/img/btn/tools.png" onmouseover="this.src='../skin/img/btn/toolsOver.png';" onmouseout="this.src='../skin/img/btn/tools.png';" class="btnImg"><span class="btnLbl">Outils</span></span></a></li></ul></div><div id="tplMain" class="tplMainMnu_open"><div id="tplMnu"><hr class="hidden"><a id="menu" class="accessAnc" name="menu" href="#menu"></a><strong class="hidden">Menu&nbsp;: </strong><div class="mnuBlock"></div><div class="mnuFra"><ul class="mnu mnu_static  mnu_sch_no"><li class="mnu_sel_no mnu_l mnu_dpt_0 mnu_obj"><div class="mnuLbl mnu_sel_no mnu_l mnu_dpt_0 mnu_obj mnu_sch_no" id="2_tableur.html"><a href="2_tableur.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Objectifs</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_1.html"><a href="2_tableur_1.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>D&eacute;finitions</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_3.html"><a href="2_tableur_3.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>D&eacute;couverte du logiciel</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_5.html"><a href="2_tableur_5.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>R&eacute;f&eacute;rences de cellules et op&eacute;rations de base</span></span></a></div><ul class="mnu_sub mnu_sub_o"><li class="mnu_sel_no mnu_l mnu_dpt_1 mnu_expUc"><div class="mnuLbl mnu_sel_no mnu_l mnu_dpt_1 mnu_expUc mnu_sch_no" id="2_tableur_6.html"><a href="2_tableur_6.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>R&eacute;f&eacute;rences relatives</span></span></a></div></li><li class="mnu_sel_no mnu_l mnu_dpt_1 mnu_expUc"><div class="mnuLbl mnu_sel_no mnu_l mnu_dpt_1 mnu_expUc mnu_sch_no" id="2_tableur_40.html"><a href="2_tableur_40.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>&Eacute;tirer une formule</span></span></a></div></li><li class="mnu_sel_no mnu_l mnu_dpt_1 mnu_expUc"><div class="mnuLbl mnu_sel_no mnu_l mnu_dpt_1 mnu_expUc mnu_sch_no" id="2_tableur_41.html"><a href="2_tableur_41.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>R&eacute;f&eacute;rences absolues</span></span></a></div></li><li class="mnu_sel_no mnu_l mnu_dpt_1 mnu_expUc"><div class="mnuLbl mnu_sel_no mnu_l mnu_dpt_1 mnu_expUc mnu_sch_no" id="2_tableur_42.html"><a href="2_tableur_42.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>R&eacute;f&eacute;rences mixtes</span></span></a></div></li><li class="mnu_sel_no mnu_l mnu_dpt_1 mnu_expUc"><div class="mnuLbl mnu_sel_no mnu_l mnu_dpt_1 mnu_expUc mnu_sch_no" id="2_tableur_43.html"><a href="2_tableur_43.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Op&eacute;rations de base</span></span></a></div></li><li class="mnu_sel_yes mnu_l mnu_dpt_1 mnu_coQuiz"><div class="mnuLbl mnu_sel_yes mnu_l mnu_dpt_1 mnu_coQuiz mnu_sch_no" id="quel_type_references.html"><span class="mnu_i"><span class="mnu_sch"><span><span class="mnu_cursor"></span>L'hybride est relativement absolu</span></span></span></div></li><li class="mnu_sel_no mnu_l mnu_dpt_1 mnu_expUc"><div class="mnuLbl mnu_sel_no mnu_l mnu_dpt_1 mnu_expUc mnu_sch_no" id="2_tableur_44.html"><a href="2_tableur_44.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Moodle&nbsp;: Exercice&nbsp;- Op&eacute;rations de base</span></span></a></div></li></ul></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_7.html"><a href="2_tableur_7.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Fonctions math&eacute;matiques simples</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_9.html"><a href="2_tableur_9.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Mise en page simple</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_11.html"><a href="2_tableur_11.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Op&eacute;rations logiques</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_13.html"><a href="2_tableur_13.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Fonctions logiques</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_15.html"><a href="2_tableur_15.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Tableaux et repr&eacute;sentations graphiques</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_17.html"><a href="2_tableur_17.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Tableaux crois&eacute;s dynamiques</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_19.html"><a href="2_tableur_19.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Fonctions courantes</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_21.html"><a href="2_tableur_21.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Mise en page et impression</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_23.html"><a href="2_tableur_23.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Protection des donn&eacute;es</span></span></a></div></li></ul><script type="text/javascript">scServices.totalPages = 112;</script></div><div id="tplIco"><div class="decoTrainUc"></div></div></div><div id="tplCo"><div class="scroller"><hr class="hidden"><a id="content" class="accessAnc" name="content" href="#content"></a><strong class="hidden">Contenu&nbsp;: </strong><div id="tplCoMarginW" style><div id="tplCoFlexTop"></div><div class="mainContent coQuizContent"><h2 class="mainContent_ti coQuiz">L'hybride est relativement absolu</h2><p id="noJsWarn">Attention, votre navigateur ne supporte pas le javascript ou celui-ci a &eacute;t&eacute; d&eacute;sactiv&eacute;. Certaines fonctionnalit&eacute;s dynamiques de ce module sont restreintes.</p><script type="text/JavaScript">var vNoJsWarn = scPaLib.findNode("ide:noJsWarn");
+if (vNoJsWarn && vNoJsWarn.parentNode) vNoJsWarn.parentNode.removeChild(vNoJsWarn);
+</script><div class="divQuiz"><script type="text/JavaScript">
+var fVP25bX2IsjPylVdYgyWl = {
+
+	fId : "fVP25bX2IsjPylVdYgyWl",
+	fCurSeq : null,
+	initSeq : function(pCodeSeq){
+	try {
+		if(pCodeSeq==null) return;
+		if(this.fCurSeq!=null) this.closeSeq();
+		this.fCurSeq = pCodeSeq;
+		switch(this.fCurSeq) {
+
+	case "play" : {
+scAssmntMgr.setMode(sc$("fVP25bX2IsjPylVdYgyWl_N_score"), "invisible");
+scAssmntMgr.setToggleStatus(sc$("fVP25bX2IsjPylVdYgyWl_S_N3e"), false);
+
+		this.computeScore = function(pInput, pIdx) {
+			this.fMinPts = 0;
+			this.fMaxPts = 0;
+			this.fScorePts = 0;
+			var vRate;
+
+		var vSubAssmnt = {fSession:"", compute:function(pParent, pId, pRate){
+			this.fMinPts = scServices.assmntMgr.getMinPts(pId, this.fSession)||0;
+			this.fScorePts = scServices.assmntMgr.getScorePts(pId, this.fSession)||0;
+			this.fMaxPts = scServices.assmntMgr.getMaxPts(pId, this.fSession)||1;
+
+			pParent.fMinPts += this.fMinPts;
+			pParent.fScorePts += this.fScorePts;
+			pParent.fMaxPts += this.fMaxPts;
+		}};
+
+		vSubAssmnt.compute(this, "Cm6VdoCbzaljyVYos0MPUi", 1);
+
+		vSubAssmnt.compute(this, "qT7sN8bhVh28i0gLsqMqf", 1);
+
+		vSubAssmnt.compute(this, "NmL8Rit8VvkkJG2YckPnLd", 1);
+
+		vSubAssmnt.compute(this, "YMoXIGHgOPbFGjUXIQoiY", 1);
+
+		vSubAssmnt.compute(this, "K8AXnR9rgkb5gOlANTunib", 1);
+
+		vSubAssmnt.compute(this, "VREHa1YIAMeFIsQJ18BRAg", 1);
+
+		vSubAssmnt.compute(this, "sgWRlkh0yzeyqhlpmioe3c", 1);
+
+		if(this.fMaxPts < 100) {
+
+				this.fScorePts = this.fMinPts + (this.fScorePts-this.fMinPts) / (this.fMaxPts-this.fMinPts) * (100-this.fMinPts); 
+
+			this.fMaxPts = 100;
+		}
+var vScoreSession = "";
+			scServices.assmntMgr.setPts(this.fId, vScoreSession, this.fMinPts, this.fScorePts, this.fMaxPts);
+
+						this.refreshScoresFeedbacks();
+		}
+
+		this.handleAssmntPts = function(pEvent){if(pEvent.fId=="Cm6VdoCbzaljyVYos0MPUi" || pEvent.fId=="qT7sN8bhVh28i0gLsqMqf" || pEvent.fId=="NmL8Rit8VvkkJG2YckPnLd" || pEvent.fId=="YMoXIGHgOPbFGjUXIQoiY" || pEvent.fId=="K8AXnR9rgkb5gOlANTunib" || pEvent.fId=="VREHa1YIAMeFIsQJ18BRAg" || pEvent.fId=="sgWRlkh0yzeyqhlpmioe3c" || false) this.computeScore();}
+		scServices.assmntMgr.addEventListener(this);
+		this.computeScore();
+
+		break;
+	}
+
+		}
+	}catch(e){alert("failed:::"+e)};
+	},
+	onActionN63 : function(pButton){
+		if(scAssmntMgr.isDisabled(pButton)) return;
+Cm6VdoCbzaljyVYos0MPUi_Alist.fct_reset(); 
+qT7sN8bhVh28i0gLsqMqf_Alist.fct_reset(); 
+NmL8Rit8VvkkJG2YckPnLd_Alist.fct_reset(); 
+YMoXIGHgOPbFGjUXIQoiY_Alist.fct_reset(); 
+K8AXnR9rgkb5gOlANTunib_Alist.fct_reset(); 
+VREHa1YIAMeFIsQJ18BRAg_Alist.fct_reset(); 
+sgWRlkh0yzeyqhlpmioe3c_Alist.fct_reset(); 
+this.initSeq("play");
+
+		scServices.assmntMgr.commit();
+	},
+	onActionN3e : function(pButton){
+		if(scAssmntMgr.isDisabled(pButton)) return;
+		var vIsOn = scAssmntMgr.isToggleOn(pButton);
+		if(vIsOn) {
+Cm6VdoCbzaljyVYos0MPUi_Alist.fct_play(); 
+qT7sN8bhVh28i0gLsqMqf_Alist.fct_play(); 
+NmL8Rit8VvkkJG2YckPnLd_Alist.fct_play(); 
+YMoXIGHgOPbFGjUXIQoiY_Alist.fct_play(); 
+K8AXnR9rgkb5gOlANTunib_Alist.fct_play(); 
+VREHa1YIAMeFIsQJ18BRAg_Alist.fct_play(); 
+sgWRlkh0yzeyqhlpmioe3c_Alist.fct_play(); 
+scAssmntMgr.setMode(sc$("fVP25bX2IsjPylVdYgyWl_N_score"), "invisible");
+
+		} else {
+Cm6VdoCbzaljyVYos0MPUi_Alist.fct_displaySol(); 
+qT7sN8bhVh28i0gLsqMqf_Alist.fct_displaySol(); 
+NmL8Rit8VvkkJG2YckPnLd_Alist.fct_displaySol(); 
+YMoXIGHgOPbFGjUXIQoiY_Alist.fct_displaySol(); 
+K8AXnR9rgkb5gOlANTunib_Alist.fct_displaySol(); 
+VREHa1YIAMeFIsQJ18BRAg_Alist.fct_displaySol(); 
+sgWRlkh0yzeyqhlpmioe3c_Alist.fct_displaySol(); 
+scAssmntMgr.setMode(sc$("fVP25bX2IsjPylVdYgyWl_N_score"), "visible");
+
+		}
+		scAssmntMgr.setToggleStatus(pButton, ! vIsOn);
+		scServices.assmntMgr.commit();
+	},
+
+	closeSeq: function(){
+		var vForm = document.forms.fVP25bX2IsjPylVdYgyWl_form;
+		switch(this.fCurSeq) {
+
+	case "play" : {
+
+		scServices.assmntMgr.removeEventListener(this);
+		this.computeScore();
+
+		break;
+	}
+
+		}
+		this.fCurSeq = null;
+	},
+	getOnLoadSeq:function() {
+
+			return "play";
+
+	return null;
+	},
+
+	
+	refreshScoresFeedbacks : function(){
+
+		var vScoreNode = sc$("fVP25bX2IsjPylVdYgyWl_SN80");
+
+		var vScore = (Math.round((this.fScorePts-this.fMinPts) / (this.fMaxPts-this.fMinPts) * 100) * 1)+ 0;
+if(vScore > 99 && true) {
+			vScoreNode.innerHTML = "<span>" + vScore + "% de bonnes réponses<\/span>";
+			vScoreNode.className = "answBest";
+		} else if(vScore > 49 && vScore <= 99 && true) {
+			vScoreNode.innerHTML = "<span>" + vScore + "% de bonnes réponses<\/span>";
+			vScoreNode.className = "answGood";
+		} else if(vScore > 0 && vScore <= 49 && true) {
+			vScoreNode.innerHTML = "<span>" + vScore + "% de bonnes réponses<\/span>";
+			vScoreNode.className = "answBad";
+		} else if(vScore <= 0 && true) {
+			vScoreNode.innerHTML = "<span>" + vScore + "% de bonnes réponses<\/span>";
+			vScoreNode.className = "answWorst";
+		} else  {
+			vScoreNode.innerHTML = "";
+			vScoreNode.className = "";
+		}
+
+	},
+	onLoad: function(){
+		this.initSeq(this.getOnLoadSeq()); 
+		var vNodeRoot = sc$("fVP25bX2IsjPylVdYgyWl_A");
+		vNodeRoot.style.display = "block"; 
+	},
+	onUnload: function(){
+		this.closeSeq();
+	},
+	loadSortKey: "B",
+	unloadSortKey: "B"
+};
+
+scOnLoads[scOnLoads.length] = fVP25bX2IsjPylVdYgyWl;
+scOnUnloads[scOnUnloads.length] = fVP25bX2IsjPylVdYgyWl;
+</script><div id="fVP25bX2IsjPylVdYgyWl_A" style="display:none;"><div class="bkSolResOut"><div class="bkSolResFra1"><div class="bkSolResFra2"><div class="bkSolResFra3"><div class="bkSolResCo"><div class="btnCorrection"><a role="button" title="Afficher le score et la correction" href="#" onkeydown="scDynUiMgr.handleBtnKeyDwn(event);" onkeyup="scDynUiMgr.handleBtnKeyUp(event);" onclick="fVP25bX2IsjPylVdYgyWl.onActionN3e(this); return false;" class="btnQuiz " id="fVP25bX2IsjPylVdYgyWl_S_N3e"><span class="btnQuizCaption">Correction</span></a></div><div class="btnReset"><a role="button" title="Effacer les r&eacute;ponses" href="#" onkeydown="scDynUiMgr.handleBtnKeyDwn(event);" onkeyup="scDynUiMgr.handleBtnKeyUp(event);" onclick="fVP25bX2IsjPylVdYgyWl.onActionN63(this); return false;" class="btnQuiz "><span class="btnQuizCaption">Recommencer</span></a></div><div class="scoreBox"><div class="score " aria-live="polite" id="fVP25bX2IsjPylVdYgyWl_N_score"><div id="fVP25bX2IsjPylVdYgyWl_SN80"><span></span></div></div></div></div></div></div></div></div><div class="coQuiz "><div class="coQuizQuest "><div class="headerQ "><div class="question "><div><p class="op_txt_p">Vous retrouvez ici diff&eacute;rentes questions concernant les r&eacute;f&eacute;rences  relatives, absolues et mixtes. </p><p class="op_txt_p">S&eacute;lectionnez votre r&eacute;ponse pour chaque question, puis v&eacute;rifiez vos r&eacute;sultats &agrave; l'aide du bouton &quot;Correction&quot;.</p></div></div></div></div><div class="coQuizList "><div class="subQuiz "><h3 class="subQuiz_ti"><span>Exercice</span></h3><div class="subQuiz_co "><script type="text/JavaScript">
+var Cm6VdoCbzaljyVYos0MPUi_Alist = {
+
+	fId : "Cm6VdoCbzaljyVYos0MPUi",
+	fCurSeq : null,
+	initSeq : function(pCodeSeq){
+	try {
+		if(pCodeSeq==null) return;
+		if(this.fCurSeq!=null) this.closeSeq();
+		this.fCurSeq = pCodeSeq;
+		switch(this.fCurSeq) {
+case "play" : {
+		var vForm = document.forms.Cm6VdoCbzaljyVYos0MPUi_Alist_form;
+		for (var i=0; i < vForm.length; i++) {
+			vForm.elements[i].disabled = false;
+			vForm.elements[i].checked = false;
+		}
+
+var vLoadRespSession = "";
+for (var i=0; i < vForm.length; i++) {
+			var vInput = vForm.elements[i];
+			vInput.checked = scServices.assmntMgr.getResponse(this.fId, vLoadRespSession, vInput.value);
+		}
+
+		this.setSolution(false);
+scAssmntMgr.setMode(sc$("Cm6VdoCbzaljyVYos0MPUi_Alist_N_choiceList"), "visible");
+scAssmntMgr.setMode(sc$("Cm6VdoCbzaljyVYos0MPUi_Alist_N_gExpln"), "collapsed");
+scAssmntMgr.setMode(sc$("Cm6VdoCbzaljyVYos0MPUi_Alist_N_question"), "visible");
+scAssmntMgr.setMode(sc$("Cm6VdoCbzaljyVYos0MPUi_Alist_N_score"), "invisible");
+scAssmntMgr.setMode(sc$("Cm6VdoCbzaljyVYos0MPUi_Alist_N0_choice"), "visible");
+scAssmntMgr.setMode(sc$("Cm6VdoCbzaljyVYos0MPUi_Alist_N1_choice"), "visible");
+scAssmntMgr.setMode(sc$("Cm6VdoCbzaljyVYos0MPUi_Alist_N2_choice"), "visible");
+scAssmntMgr.setMode(sc$("Cm6VdoCbzaljyVYos0MPUi_Alist_N0_label"), "visible");
+scAssmntMgr.setMode(sc$("Cm6VdoCbzaljyVYos0MPUi_Alist_N1_label"), "visible");
+scAssmntMgr.setMode(sc$("Cm6VdoCbzaljyVYos0MPUi_Alist_N2_label"), "visible");
+scAssmntMgr.setMode(sc$("Cm6VdoCbzaljyVYos0MPUi_Alist_N0_chExpln"), "collapsed");
+scAssmntMgr.setMode(sc$("Cm6VdoCbzaljyVYos0MPUi_Alist_N1_chExpln"), "collapsed");
+scAssmntMgr.setMode(sc$("Cm6VdoCbzaljyVYos0MPUi_Alist_N2_chExpln"), "collapsed");
+var vRespSession = "";
+		if(scServices.assmntMgr.getCompletionStatus(this.fId, vRespSession)=="notAttempt") scServices.assmntMgr.setCompletionStatus(this.fId, vRespSession, "attempt");
+		this.setResp = function(pInput, pIdx) {
+			scServices.assmntMgr.setResponse(this.fId, vRespSession, pIdx, pInput.checked);
+
+			this.computeScore();
+			scServices.assmntMgr.commit();
+		}				
+
+		this.computeScore = function() {
+
+		this.fMinPts = 0;
+		this.fMaxPts = 1;
+		this.fScorePts = true && vForm.elements[0].checked && ! vForm.elements[1].checked && ! vForm.elements[2].checked ? this.fMaxPts : this.fMinPts;
+
+				this.fScorePts = 0 + (this.fScorePts-this.fMinPts) / (this.fMaxPts-this.fMinPts) * (1 - 0); 
+
+			this.fMinPts = 0;
+
+			this.fMaxPts = 1;
+
+		//alert("score:::::"+this.fMinPts+" - "+this.fScorePts+" - "+this.fMaxPts);
+var vScoreSession = "";
+		if(this.fScorePts != null) scServices.assmntMgr.setPts(this.fId, vScoreSession, this.fMinPts, this.fScorePts, this.fMaxPts);
+
+			this.refreshScoresFeedbacks();
+		}
+
+if(vRespSession != vLoadRespSession) {
+for (var i=0; i < vForm.length; i++) {
+			var vInput = vForm.elements[i];
+			scServices.assmntMgr.setResponse(this.fId, vRespSession, vInput.value, vInput.checked);
+		}
+}
+this.computeScore();
+
+		scServices.assmntMgr.commit();
+		break;
+	}
+
+		}
+	}catch(e){alert("failed:::"+e)};
+	},
+	fct_play : function(){
+this.initSeq("play");
+
+	},
+	fct_displaySol : function(){
+var vForm=document.forms.Cm6VdoCbzaljyVYos0MPUi_Alist_form; for (var i=0; i < vForm.length; i++) vForm.elements[i].disabled = true; this.setSolution(true); scAssmntMgr.setMode(sc$("Cm6VdoCbzaljyVYos0MPUi_Alist_N_gExpln"), "visible");
+scAssmntMgr.setMode(sc$("Cm6VdoCbzaljyVYos0MPUi_Alist_N0_chExpln"), "visible"); scAssmntMgr.setMode(sc$("Cm6VdoCbzaljyVYos0MPUi_Alist_N1_chExpln"), "visible"); scAssmntMgr.setMode(sc$("Cm6VdoCbzaljyVYos0MPUi_Alist_N2_chExpln"), "visible"); scAssmntMgr.setMode(sc$("Cm6VdoCbzaljyVYos0MPUi_Alist_N_score"), "visible");
+
+	},
+	fct_reset : function(){
+var vSess="";
+scServices.assmntMgr.resetResponses(this.fId, vSess);
+scServices.assmntMgr.setPts(this.fId, vSess, null, null, null); 
+this.initSeq("play");
+
+	},
+
+	closeSeq: function(){
+		var vForm = document.forms.Cm6VdoCbzaljyVYos0MPUi_Alist_form;
+		switch(this.fCurSeq) {
+
+	case "play" : {
+
+		break;
+	}
+
+		}
+		this.fCurSeq = null;
+	},
+	getOnLoadSeq:function() {
+
+			return "play";
+
+	return null;
+	},
+
+	refreshScoresFeedbacks : function(){
+		
+
+		var vScoreNode = sc$("Cm6VdoCbzaljyVYos0MPUi_Alist_SN6b");
+
+		var vScore = (Math.round((this.fScorePts-this.fMinPts) / (this.fMaxPts-this.fMinPts) * 100) * 1)+ 0;
+if(vScore > 99 && true) {
+			vScoreNode.innerHTML = "<span>"  + "Bonne réponse<\/span>";
+			vScoreNode.className = "answBest";
+		} else if(vScore > 49 && vScore <= 99 && true) {
+			vScoreNode.innerHTML = "<span>" + vScore + "% de bonnes réponses<\/span>";
+			vScoreNode.className = "answGood";
+		} else if(vScore > 0 && vScore <= 49 && true) {
+			vScoreNode.innerHTML = "<span>" + vScore + "% de bonnes réponses<\/span>";
+			vScoreNode.className = "answBad";
+		} else if(vScore <= 0 && true) {
+			vScoreNode.innerHTML = "<span>"  + "Mauvaise réponse <\/span>";
+			vScoreNode.className = "answWorst";
+		} else  {
+			vScoreNode.innerHTML = "";
+			vScoreNode.className = "";
+		}
+
+	},
+	solIsShown : false,
+	setSolution : function(pShown){
+		var vTR = document.forms.Cm6VdoCbzaljyVYos0MPUi_Alist_form.firstChild;
+		while(vTR.nodeType!=1) vTR = vTR.nextSibling;
+		vTR = vTR.firstChild;
+		while(vTR.nodeType!=1) vTR = vTR.nextSibling;
+		if(vTR.nodeName.toLowerCase()=="tbody") vTR = vTR.firstChild;
+		while(vTR.nodeType!=1) vTR = vTR.nextSibling;
+		if(!pShown && this.solIsShown) {
+			while(vTR) {
+				if(vTR.nodeName.toLowerCase()=="tr") {
+					var vOffs = vTR.className.indexOf("assmntSol");
+					if(vOffs>=0) vTR.className = vTR.className.substring(0, vOffs) + vTR.className.substring(vOffs+14);
+				}
+				vTR = vTR.nextSibling;
+			}
+		} else if(pShown && ! this.solIsShown) {
+
+			while(vTR.nodeName.toLowerCase()!="tr") vTR = vTR.nextSibling;
+			vTR.className = "assmntSolCheck " + vTR.className;
+			vTR = vTR.nextSibling;
+
+			while(vTR.nodeName.toLowerCase()!="tr") vTR = vTR.nextSibling;
+			vTR.className = "assmntSolUnche " + vTR.className;
+			vTR = vTR.nextSibling;
+
+			while(vTR.nodeName.toLowerCase()!="tr") vTR = vTR.nextSibling;
+			vTR.className = "assmntSolUnche " + vTR.className;
+			vTR = vTR.nextSibling;
+
+		}
+		this.solIsShown = pShown;
+	},
+	onLoad: function(){
+		this.initSeq(this.getOnLoadSeq()); 
+		var vNodeRoot = sc$("Cm6VdoCbzaljyVYos0MPUi_Alist_A");
+		vNodeRoot.style.display = "block"; 
+	},
+	onUnload: function(){
+		this.closeSeq();
+	},
+	loadSortKey: "A",
+	unloadSortKey: "A"
+};
+
+scOnLoads[scOnLoads.length] = Cm6VdoCbzaljyVYos0MPUi_Alist;
+scOnUnloads[scOnUnloads.length] = Cm6VdoCbzaljyVYos0MPUi_Alist;
+</script><div id="Cm6VdoCbzaljyVYos0MPUi_Alist_A" style="display:none;"><div class="headerQ"><div id="Cm6VdoCbzaljyVYos0MPUi_Alist_N_question" class="question"><div><p class="op_txt_p">Dans la formule =A2*B6, <strong class="op_txt_is_emp">B6</strong> est </p></div></div></div><div class="scoreBox"><div class="score " aria-live="polite" id="Cm6VdoCbzaljyVYos0MPUi_Alist_N_score"><div id="Cm6VdoCbzaljyVYos0MPUi_Alist_SN6b"><span></span></div></div></div><div id="Cm6VdoCbzaljyVYos0MPUi_Alist_N_choiceList"><form action name="Cm6VdoCbzaljyVYos0MPUi_Alist_form" id="Cm6VdoCbzaljyVYos0MPUi_Alist_form"><table class="choiceList "><tr class="choiceList_ch "><td class="choiceList_in "><input type="checkbox" name="Cm6VdoCbzaljyVYos0MPUi_Alist_0" id="Cm6VdoCbzaljyVYos0MPUi_Alist_0" value="0" onclick="Cm6VdoCbzaljyVYos0MPUi_Alist.setResp(this, 0);"></td><td class="choiceList_la "><div id="Cm6VdoCbzaljyVYos0MPUi_Alist_N0_choice" class="choice"><div id="Cm6VdoCbzaljyVYos0MPUi_Alist_N0_label" class="label"><p class="op_txt_p">une r&eacute;f&eacute;rence relative</p></div></div></td></tr><tr class="choiceList_ch "><td class="choiceList_in "><input type="checkbox" name="Cm6VdoCbzaljyVYos0MPUi_Alist_1" id="Cm6VdoCbzaljyVYos0MPUi_Alist_1" value="1" onclick="Cm6VdoCbzaljyVYos0MPUi_Alist.setResp(this, 1);"></td><td class="choiceList_la "><div id="Cm6VdoCbzaljyVYos0MPUi_Alist_N1_choice" class="choice"><div id="Cm6VdoCbzaljyVYos0MPUi_Alist_N1_label" class="label"><p class="op_txt_p">une r&eacute;f&eacute;rence absolue</p></div></div></td></tr><tr class="choiceList_ch "><td class="choiceList_in "><input type="checkbox" name="Cm6VdoCbzaljyVYos0MPUi_Alist_2" id="Cm6VdoCbzaljyVYos0MPUi_Alist_2" value="2" onclick="Cm6VdoCbzaljyVYos0MPUi_Alist.setResp(this, 2);"></td><td class="choiceList_la "><div id="Cm6VdoCbzaljyVYos0MPUi_Alist_N2_choice" class="choice"><div id="Cm6VdoCbzaljyVYos0MPUi_Alist_N2_label" class="label"><p class="op_txt_p">une r&eacute;f&eacute;rence mixte</p></div></div></td></tr></table></form></div></div></div></div><div class="subQuiz "><h3 class="subQuiz_ti"><span>Exercice</span></h3><div class="subQuiz_co "><script type="text/JavaScript">
+var qT7sN8bhVh28i0gLsqMqf_Alist = {
+
+	fId : "qT7sN8bhVh28i0gLsqMqf",
+	fCurSeq : null,
+	initSeq : function(pCodeSeq){
+	try {
+		if(pCodeSeq==null) return;
+		if(this.fCurSeq!=null) this.closeSeq();
+		this.fCurSeq = pCodeSeq;
+		switch(this.fCurSeq) {
+case "play" : {
+		var vForm = document.forms.qT7sN8bhVh28i0gLsqMqf_Alist_form;
+		for (var i=0; i < vForm.length; i++) {
+			vForm.elements[i].disabled = false;
+			vForm.elements[i].checked = false;
+		}
+
+var vLoadRespSession = "";
+for (var i=0; i < vForm.length; i++) {
+			var vInput = vForm.elements[i];
+			vInput.checked = scServices.assmntMgr.getResponse(this.fId, vLoadRespSession, vInput.value);
+		}
+
+		this.setSolution(false);
+scAssmntMgr.setMode(sc$("qT7sN8bhVh28i0gLsqMqf_Alist_N_choiceList"), "visible");
+scAssmntMgr.setMode(sc$("qT7sN8bhVh28i0gLsqMqf_Alist_N_gExpln"), "collapsed");
+scAssmntMgr.setMode(sc$("qT7sN8bhVh28i0gLsqMqf_Alist_N_question"), "visible");
+scAssmntMgr.setMode(sc$("qT7sN8bhVh28i0gLsqMqf_Alist_N_score"), "invisible");
+scAssmntMgr.setMode(sc$("qT7sN8bhVh28i0gLsqMqf_Alist_N0_choice"), "visible");
+scAssmntMgr.setMode(sc$("qT7sN8bhVh28i0gLsqMqf_Alist_N1_choice"), "visible");
+scAssmntMgr.setMode(sc$("qT7sN8bhVh28i0gLsqMqf_Alist_N0_label"), "visible");
+scAssmntMgr.setMode(sc$("qT7sN8bhVh28i0gLsqMqf_Alist_N1_label"), "visible");
+scAssmntMgr.setMode(sc$("qT7sN8bhVh28i0gLsqMqf_Alist_N0_chExpln"), "collapsed");
+scAssmntMgr.setMode(sc$("qT7sN8bhVh28i0gLsqMqf_Alist_N1_chExpln"), "collapsed");
+var vRespSession = "";
+		if(scServices.assmntMgr.getCompletionStatus(this.fId, vRespSession)=="notAttempt") scServices.assmntMgr.setCompletionStatus(this.fId, vRespSession, "attempt");
+		this.setResp = function(pInput, pIdx) {
+			scServices.assmntMgr.setResponse(this.fId, vRespSession, pIdx, pInput.checked);
+
+			this.computeScore();
+			scServices.assmntMgr.commit();
+		}				
+
+		this.computeScore = function() {
+
+		this.fMinPts = 0;
+		this.fMaxPts = 1;
+		this.fScorePts = true && ! vForm.elements[0].checked && vForm.elements[1].checked ? this.fMaxPts : this.fMinPts;
+
+				this.fScorePts = 0 + (this.fScorePts-this.fMinPts) / (this.fMaxPts-this.fMinPts) * (1 - 0); 
+
+			this.fMinPts = 0;
+
+			this.fMaxPts = 1;
+
+		//alert("score:::::"+this.fMinPts+" - "+this.fScorePts+" - "+this.fMaxPts);
+var vScoreSession = "";
+		if(this.fScorePts != null) scServices.assmntMgr.setPts(this.fId, vScoreSession, this.fMinPts, this.fScorePts, this.fMaxPts);
+
+			this.refreshScoresFeedbacks();
+		}
+
+if(vRespSession != vLoadRespSession) {
+for (var i=0; i < vForm.length; i++) {
+			var vInput = vForm.elements[i];
+			scServices.assmntMgr.setResponse(this.fId, vRespSession, vInput.value, vInput.checked);
+		}
+}
+this.computeScore();
+
+		scServices.assmntMgr.commit();
+		break;
+	}
+
+		}
+	}catch(e){alert("failed:::"+e)};
+	},
+	fct_play : function(){
+this.initSeq("play");
+
+	},
+	fct_displaySol : function(){
+var vForm=document.forms.qT7sN8bhVh28i0gLsqMqf_Alist_form; for (var i=0; i < vForm.length; i++) vForm.elements[i].disabled = true; this.setSolution(true); scAssmntMgr.setMode(sc$("qT7sN8bhVh28i0gLsqMqf_Alist_N_gExpln"), "visible");
+scAssmntMgr.setMode(sc$("qT7sN8bhVh28i0gLsqMqf_Alist_N0_chExpln"), "visible"); scAssmntMgr.setMode(sc$("qT7sN8bhVh28i0gLsqMqf_Alist_N1_chExpln"), "visible"); scAssmntMgr.setMode(sc$("qT7sN8bhVh28i0gLsqMqf_Alist_N_score"), "visible");
+
+	},
+	fct_reset : function(){
+var vSess="";
+scServices.assmntMgr.resetResponses(this.fId, vSess);
+scServices.assmntMgr.setPts(this.fId, vSess, null, null, null); 
+this.initSeq("play");
+
+	},
+
+	closeSeq: function(){
+		var vForm = document.forms.qT7sN8bhVh28i0gLsqMqf_Alist_form;
+		switch(this.fCurSeq) {
+
+	case "play" : {
+
+		break;
+	}
+
+		}
+		this.fCurSeq = null;
+	},
+	getOnLoadSeq:function() {
+
+			return "play";
+
+	return null;
+	},
+
+	refreshScoresFeedbacks : function(){
+		
+
+		var vScoreNode = sc$("qT7sN8bhVh28i0gLsqMqf_Alist_SN6b");
+
+		var vScore = (Math.round((this.fScorePts-this.fMinPts) / (this.fMaxPts-this.fMinPts) * 100) * 1)+ 0;
+if(vScore > 99 && true) {
+			vScoreNode.innerHTML = "<span>"  + "Bonne réponse<\/span>";
+			vScoreNode.className = "answBest";
+		} else if(vScore > 49 && vScore <= 99 && true) {
+			vScoreNode.innerHTML = "<span>" + vScore + "% de bonnes réponses<\/span>";
+			vScoreNode.className = "answGood";
+		} else if(vScore > 0 && vScore <= 49 && true) {
+			vScoreNode.innerHTML = "<span>" + vScore + "% de bonnes réponses<\/span>";
+			vScoreNode.className = "answBad";
+		} else if(vScore <= 0 && true) {
+			vScoreNode.innerHTML = "<span>"  + "Mauvaise réponse <\/span>";
+			vScoreNode.className = "answWorst";
+		} else  {
+			vScoreNode.innerHTML = "";
+			vScoreNode.className = "";
+		}
+
+	},
+	solIsShown : false,
+	setSolution : function(pShown){
+		var vTR = document.forms.qT7sN8bhVh28i0gLsqMqf_Alist_form.firstChild;
+		while(vTR.nodeType!=1) vTR = vTR.nextSibling;
+		vTR = vTR.firstChild;
+		while(vTR.nodeType!=1) vTR = vTR.nextSibling;
+		if(vTR.nodeName.toLowerCase()=="tbody") vTR = vTR.firstChild;
+		while(vTR.nodeType!=1) vTR = vTR.nextSibling;
+		if(!pShown && this.solIsShown) {
+			while(vTR) {
+				if(vTR.nodeName.toLowerCase()=="tr") {
+					var vOffs = vTR.className.indexOf("assmntSol");
+					if(vOffs>=0) vTR.className = vTR.className.substring(0, vOffs) + vTR.className.substring(vOffs+14);
+				}
+				vTR = vTR.nextSibling;
+			}
+		} else if(pShown && ! this.solIsShown) {
+
+			while(vTR.nodeName.toLowerCase()!="tr") vTR = vTR.nextSibling;
+			vTR.className = "assmntSolUnche " + vTR.className;
+			vTR = vTR.nextSibling;
+
+			while(vTR.nodeName.toLowerCase()!="tr") vTR = vTR.nextSibling;
+			vTR.className = "assmntSolCheck " + vTR.className;
+			vTR = vTR.nextSibling;
+
+		}
+		this.solIsShown = pShown;
+	},
+	onLoad: function(){
+		this.initSeq(this.getOnLoadSeq()); 
+		var vNodeRoot = sc$("qT7sN8bhVh28i0gLsqMqf_Alist_A");
+		vNodeRoot.style.display = "block"; 
+	},
+	onUnload: function(){
+		this.closeSeq();
+	},
+	loadSortKey: "A",
+	unloadSortKey: "A"
+};
+
+scOnLoads[scOnLoads.length] = qT7sN8bhVh28i0gLsqMqf_Alist;
+scOnUnloads[scOnUnloads.length] = qT7sN8bhVh28i0gLsqMqf_Alist;
+</script><div id="qT7sN8bhVh28i0gLsqMqf_Alist_A" style="display:none;"><div class="headerQ"><div id="qT7sN8bhVh28i0gLsqMqf_Alist_N_question" class="question"><div><p class="op_txt_p">Une r&eacute;f&eacute;rence est dite &quot;relative&quot; si la r&eacute;f&eacute;rence &agrave; la cellule reste identique lorsque l'on &eacute;tire une formule.</p></div></div></div><div class="scoreBox"><div class="score " aria-live="polite" id="qT7sN8bhVh28i0gLsqMqf_Alist_N_score"><div id="qT7sN8bhVh28i0gLsqMqf_Alist_SN6b"><span></span></div></div></div><div id="qT7sN8bhVh28i0gLsqMqf_Alist_N_choiceList"><form action name="qT7sN8bhVh28i0gLsqMqf_Alist_form" id="qT7sN8bhVh28i0gLsqMqf_Alist_form"><table class="choiceList "><tr class="choiceList_ch "><td class="choiceList_in "><input type="checkbox" name="qT7sN8bhVh28i0gLsqMqf_Alist_0" id="qT7sN8bhVh28i0gLsqMqf_Alist_0" value="0" onclick="qT7sN8bhVh28i0gLsqMqf_Alist.setResp(this, 0);"></td><td class="choiceList_la "><div id="qT7sN8bhVh28i0gLsqMqf_Alist_N0_choice" class="choice"><div id="qT7sN8bhVh28i0gLsqMqf_Alist_N0_label" class="label"><p class="op_txt_p">Vrai</p></div></div></td></tr><tr class="choiceList_ch "><td class="choiceList_in "><input type="checkbox" name="qT7sN8bhVh28i0gLsqMqf_Alist_1" id="qT7sN8bhVh28i0gLsqMqf_Alist_1" value="1" onclick="qT7sN8bhVh28i0gLsqMqf_Alist.setResp(this, 1);"></td><td class="choiceList_la "><div id="qT7sN8bhVh28i0gLsqMqf_Alist_N1_choice" class="choice"><div id="qT7sN8bhVh28i0gLsqMqf_Alist_N1_label" class="label"><p class="op_txt_p">Faux</p></div></div></td></tr></table></form></div></div></div></div><div class="subQuiz "><h3 class="subQuiz_ti"><span>Exercice</span></h3><div class="subQuiz_co "><script type="text/JavaScript">
+var NmL8Rit8VvkkJG2YckPnLd_Alist = {
+
+	fId : "NmL8Rit8VvkkJG2YckPnLd",
+	fCurSeq : null,
+	initSeq : function(pCodeSeq){
+	try {
+		if(pCodeSeq==null) return;
+		if(this.fCurSeq!=null) this.closeSeq();
+		this.fCurSeq = pCodeSeq;
+		switch(this.fCurSeq) {
+
+		case "play" : {
+		var vForm = document.forms.NmL8Rit8VvkkJG2YckPnLd_Alist_form;
+		this._Sol = {N9e:{s:[{isMatch:function(pResp){if(typeof pResp == 'undefined') return false; pResp=pResp.toUpperCase(); return 'M$6'==pResp || false;}, score:1},null],min:0,max:1},_:null};
+		this.getSolIdx = function(pFieldIndex){
+			var vF = this._Sol[pFieldIndex];
+			var vVal = vForm[pFieldIndex].value;
+			for (var i = 0; i < vF.s.length-1; i++) if(vF.s[i].isMatch(vVal)) return i;
+			return -1;
+		};
+		this.getFieldScore = function(pFieldIndex) {
+			var vI = this.getSolIdx(pFieldIndex);
+			if(vI >= 0) return this._Sol[pFieldIndex].s[vI].score;
+			return 0;
+		};
+		this.refreshResultInput = function(pInput){
+			if(this._resultDisplay == "none") pInput.parentNode.className="";
+			else {
+				var vSol = this._Sol[pInput.name];
+				var vRes = Math.round((this.getFieldScore(pInput.name) - vSol.min) / (vSol.max - vSol.min) * 1);
+				pInput.parentNode.className= "assmntResult_" + vRes;
+			}
+		};
+var vLoadRespSession = "";
+
+		for (var i=0; i < vForm.length; i++) {
+			var vFi = vForm.elements[i];
+			this.setInteraction(vFi, "enabled");
+			vFi.value = vLoadRespSession == null ? "" : scServices.assmntMgr.getResponse(this.fId, vLoadRespSession, vFi.name) || "";
+		}
+	this.refreshResult("none");
+
+
+		this.setSolution('collapsed', 'collapsed');
+scAssmntMgr.setMode(sc$("NmL8Rit8VvkkJG2YckPnLd_Alist_N_question"), "visible");
+scAssmntMgr.setMode(sc$("NmL8Rit8VvkkJG2YckPnLd_Alist_N_score"), "invisible");
+var vRespSession = "";
+		if(scServices.assmntMgr.getCompletionStatus(this.fId, vRespSession)=="notAttempt") scServices.assmntMgr.setCompletionStatus(this.fId, vRespSession, "attempt");
+		this.setResp = function(pInput) {
+			scServices.assmntMgr.setResponse(this.fId, vRespSession, pInput.name, pInput.value);
+			this.computeScore();
+			scServices.assmntMgr.commit();
+			this.refreshResultInput(pInput);
+		}				
+
+		this.computeScore = function() {
+
+			this.fMinPts = 0;
+			this.fMaxPts = 0;
+			for(var vF in this._Sol) if(vF!="_") {this.fMinPts += this._Sol[vF].min; this.fMaxPts += this._Sol[vF].max;}
+			this.fScorePts = this.getFieldScore("N9e")+0;
+
+				this.fScorePts = 0 + (this.fScorePts-this.fMinPts) / (this.fMaxPts-this.fMinPts) * (1 - 0); 
+
+			this.fMinPts = 0;
+
+			this.fMaxPts = 1;
+
+			//alert("score:::::"+this.fMinPts+" - "+this.fScorePts+" - "+this.fMaxPts);
+var vScoreSession = "";
+			if(this.fScorePts != null) scServices.assmntMgr.setPts(this.fId, vScoreSession, this.fMinPts, this.fScorePts, this.fMaxPts);
+
+			this.refreshScoresFeedbacks();
+		}
+
+if(vRespSession != vLoadRespSession) for (var i=0; i < vForm.length; i++) scServices.assmntMgr.setResponse(this.fId, vRespSession, vForm.elements[i].name, vForm.elements[i].value);
+this.computeScore();
+
+		scServices.assmntMgr.commit();
+		break;
+	}
+
+		}
+	}catch(e){alert("failed:::"+e)};
+	},
+	fct_play : function(){
+this.initSeq("play");
+
+	},
+	fct_reset : function(){
+var vSess="";
+scServices.assmntMgr.resetResponses(this.fId, vSess);
+scServices.assmntMgr.setPts(this.fId, vSess, null, null, null); 
+this.initSeq("play");
+
+	},
+	fct_displaySol : function(){
+this.setSolution('collapsed', 'visible'); this.refreshResult("none");scAssmntMgr.setMode(sc$("NmL8Rit8VvkkJG2YckPnLd_Alist_N_score"), "visible");
+var vForm=document.forms.NmL8Rit8VvkkJG2YckPnLd_Alist_form; for (var i=0; i < vForm.length; i++) this.setInteraction(vForm.elements[i], "disabled"); 
+	},
+
+	closeSeq: function(){
+		var vForm = document.forms.NmL8Rit8VvkkJG2YckPnLd_Alist_form;
+		switch(this.fCurSeq) {
+
+	case "play" : {
+
+		break;
+	}
+
+		}
+		this.fCurSeq = null;
+	},
+	getOnLoadSeq:function() {
+
+			return "play";
+
+	return null;
+	},
+
+	refreshScoresFeedbacks : function(){
+		
+
+		var vScoreNode = sc$("NmL8Rit8VvkkJG2YckPnLd_Alist_SN6c");
+
+		var vScore = (Math.round((this.fScorePts-this.fMinPts) / (this.fMaxPts-this.fMinPts) * 100) * 1)+ 0;
+if(vScore > 99 && true) {
+			vScoreNode.innerHTML = "<span>"  + "Bonne réponse<\/span>";
+			vScoreNode.className = "answBest";
+		} else if(vScore > 49 && vScore <= 99 && true) {
+			vScoreNode.innerHTML = "<span>" + vScore + "% de bonnes réponses<\/span>";
+			vScoreNode.className = "answGood";
+		} else if(vScore > 0 && vScore <= 49 && true) {
+			vScoreNode.innerHTML = "<span>" + vScore + "% de bonnes réponses<\/span>";
+			vScoreNode.className = "answBad";
+		} else if(vScore <= 0 && true) {
+			vScoreNode.innerHTML = "<span>"  + "Mauvaise réponse <\/span>";
+			vScoreNode.className = "answWorst";
+		} else  {
+			vScoreNode.innerHTML = "";
+			vScoreNode.className = "";
+		}
+
+	},
+	setSolution : function(pIfRight, pIfNotBest){
+		for(var vF in this._Sol) if(vF != "_") scAssmntMgr.setMode(sc$("NmL8Rit8VvkkJG2YckPnLd_Alist_X_"+vF), this.getSolIdx(vF)==0 ? pIfRight || "collapsed" : pIfNotBest || "collapsed");
+	},
+	setInteraction : function(pElt, pMode){
+		if(!pElt) return;
+		switch(pMode) {
+		case "collapsed" :
+			pElt.style.display = "none";
+			if("scSiLib" in window) scSiLib.fireResizedNode(pElt);
+			break;
+		case "invisible" :
+			pElt.style.display = "";
+			pElt.style.visibility = "hidden";
+			if("scSiLib" in window) scSiLib.fireResizedNode(pElt);
+			break;
+		case "enabled" : 
+		case "disabled" : 
+			pElt.disabled = (pMode=="disabled");
+		default :
+			pElt.style.display = "";
+			pElt.style.visibility = "visible";
+			if("scSiLib" in window) scSiLib.fireResizedNode(pElt);
+		}
+	},
+	refreshResult : function(pMode){
+		this._resultDisplay = pMode || "none";
+		var vForm = document.forms.NmL8Rit8VvkkJG2YckPnLd_Alist_form;
+		for (var i=0; i < vForm.length; i++) this.refreshResultInput(vForm.elements[i]);
+	},
+	onLoad: function(){
+		this.initSeq(this.getOnLoadSeq()); 
+		var vNodeRoot = sc$("NmL8Rit8VvkkJG2YckPnLd_Alist_A");
+		vNodeRoot.style.display = "block"; 
+	},
+	onUnload: function(){
+		this.closeSeq();
+	},
+	loadSortKey: "A",
+	unloadSortKey: "A"
+};
+
+scOnLoads[scOnLoads.length] = NmL8Rit8VvkkJG2YckPnLd_Alist;
+scOnUnloads[scOnUnloads.length] = NmL8Rit8VvkkJG2YckPnLd_Alist;
+</script><div id="NmL8Rit8VvkkJG2YckPnLd_Alist_A" style="display:none;"><div class="headerQ"><div id="NmL8Rit8VvkkJG2YckPnLd_Alist_N_question" class="question"></div></div><div class="scoreBox"><div class="score " aria-live="polite" id="NmL8Rit8VvkkJG2YckPnLd_Alist_N_score"><div id="NmL8Rit8VvkkJG2YckPnLd_Alist_SN6c"><span></span></div></div></div><form action="javascript:void(0);" name="NmL8Rit8VvkkJG2YckPnLd_Alist_form" id="NmL8Rit8VvkkJG2YckPnLd_Alist_form"><p class="op_clozeTxt_p">S&eacute;lectionne une r&eacute;f&eacute;rence mixte (ou hybride)&nbsp;:<span class="op_clozeTxt_tl_gap"><span><select name="N9e" onblur="NmL8Rit8VvkkJG2YckPnLd_Alist.setResp(this);"><option value><option value="D4">D4<option value="M$6">M$6<option value="$B$5">$B$5</select></span><span id="NmL8Rit8VvkkJG2YckPnLd_Alist_X_N9e" class="gapAnswer "><span>M$6</span></span></span></p></form></div></div></div><div class="subQuiz "><h3 class="subQuiz_ti"><span>Exercice</span></h3><div class="subQuiz_co "><script type="text/JavaScript">
+var YMoXIGHgOPbFGjUXIQoiY_Alist = {
+
+	fId : "YMoXIGHgOPbFGjUXIQoiY",
+	fCurSeq : null,
+	initSeq : function(pCodeSeq){
+	try {
+		if(pCodeSeq==null) return;
+		if(this.fCurSeq!=null) this.closeSeq();
+		this.fCurSeq = pCodeSeq;
+		switch(this.fCurSeq) {
+case "play" : {
+		var vForm = document.forms.YMoXIGHgOPbFGjUXIQoiY_Alist_form;
+		for (var i=0; i < vForm.length; i++) {
+			vForm.elements[i].disabled = false;
+			vForm.elements[i].checked = false;
+		}
+
+var vLoadRespSession = "";
+for (var i=0; i < vForm.length; i++) {
+			var vInput = vForm.elements[i];
+			vInput.checked = scServices.assmntMgr.getResponse(this.fId, vLoadRespSession, vInput.value);
+		}
+
+		this.setSolution(false);
+scAssmntMgr.setMode(sc$("YMoXIGHgOPbFGjUXIQoiY_Alist_N_choiceList"), "visible");
+scAssmntMgr.setMode(sc$("YMoXIGHgOPbFGjUXIQoiY_Alist_N_gExpln"), "collapsed");
+scAssmntMgr.setMode(sc$("YMoXIGHgOPbFGjUXIQoiY_Alist_N_question"), "visible");
+scAssmntMgr.setMode(sc$("YMoXIGHgOPbFGjUXIQoiY_Alist_N_score"), "invisible");
+scAssmntMgr.setMode(sc$("YMoXIGHgOPbFGjUXIQoiY_Alist_N0_choice"), "visible");
+scAssmntMgr.setMode(sc$("YMoXIGHgOPbFGjUXIQoiY_Alist_N1_choice"), "visible");
+scAssmntMgr.setMode(sc$("YMoXIGHgOPbFGjUXIQoiY_Alist_N2_choice"), "visible");
+scAssmntMgr.setMode(sc$("YMoXIGHgOPbFGjUXIQoiY_Alist_N3_choice"), "visible");
+scAssmntMgr.setMode(sc$("YMoXIGHgOPbFGjUXIQoiY_Alist_N0_label"), "visible");
+scAssmntMgr.setMode(sc$("YMoXIGHgOPbFGjUXIQoiY_Alist_N1_label"), "visible");
+scAssmntMgr.setMode(sc$("YMoXIGHgOPbFGjUXIQoiY_Alist_N2_label"), "visible");
+scAssmntMgr.setMode(sc$("YMoXIGHgOPbFGjUXIQoiY_Alist_N3_label"), "visible");
+scAssmntMgr.setMode(sc$("YMoXIGHgOPbFGjUXIQoiY_Alist_N0_chExpln"), "collapsed");
+scAssmntMgr.setMode(sc$("YMoXIGHgOPbFGjUXIQoiY_Alist_N1_chExpln"), "collapsed");
+scAssmntMgr.setMode(sc$("YMoXIGHgOPbFGjUXIQoiY_Alist_N2_chExpln"), "collapsed");
+scAssmntMgr.setMode(sc$("YMoXIGHgOPbFGjUXIQoiY_Alist_N3_chExpln"), "collapsed");
+var vRespSession = "";
+		if(scServices.assmntMgr.getCompletionStatus(this.fId, vRespSession)=="notAttempt") scServices.assmntMgr.setCompletionStatus(this.fId, vRespSession, "attempt");
+		this.setResp = function(pInput, pIdx) {
+			scServices.assmntMgr.setResponse(this.fId, vRespSession, pIdx, pInput.checked);
+
+			this.computeScore();
+			scServices.assmntMgr.commit();
+		}				
+
+		this.computeScore = function() {
+
+		this.fMinPts = 0;
+		this.fMaxPts = 1;
+		this.fScorePts = true && ! vForm.elements[0].checked && ! vForm.elements[1].checked && ! vForm.elements[2].checked && vForm.elements[3].checked ? this.fMaxPts : this.fMinPts;
+
+				this.fScorePts = 0 + (this.fScorePts-this.fMinPts) / (this.fMaxPts-this.fMinPts) * (1 - 0); 
+
+			this.fMinPts = 0;
+
+			this.fMaxPts = 1;
+
+		//alert("score:::::"+this.fMinPts+" - "+this.fScorePts+" - "+this.fMaxPts);
+var vScoreSession = "";
+		if(this.fScorePts != null) scServices.assmntMgr.setPts(this.fId, vScoreSession, this.fMinPts, this.fScorePts, this.fMaxPts);
+
+			this.refreshScoresFeedbacks();
+		}
+
+if(vRespSession != vLoadRespSession) {
+for (var i=0; i < vForm.length; i++) {
+			var vInput = vForm.elements[i];
+			scServices.assmntMgr.setResponse(this.fId, vRespSession, vInput.value, vInput.checked);
+		}
+}
+this.computeScore();
+
+		scServices.assmntMgr.commit();
+		break;
+	}
+
+		}
+	}catch(e){alert("failed:::"+e)};
+	},
+	fct_play : function(){
+this.initSeq("play");
+
+	},
+	fct_displaySol : function(){
+var vForm=document.forms.YMoXIGHgOPbFGjUXIQoiY_Alist_form; for (var i=0; i < vForm.length; i++) vForm.elements[i].disabled = true; this.setSolution(true); scAssmntMgr.setMode(sc$("YMoXIGHgOPbFGjUXIQoiY_Alist_N_gExpln"), "visible");
+scAssmntMgr.setMode(sc$("YMoXIGHgOPbFGjUXIQoiY_Alist_N0_chExpln"), "visible"); scAssmntMgr.setMode(sc$("YMoXIGHgOPbFGjUXIQoiY_Alist_N1_chExpln"), "visible"); scAssmntMgr.setMode(sc$("YMoXIGHgOPbFGjUXIQoiY_Alist_N2_chExpln"), "visible"); scAssmntMgr.setMode(sc$("YMoXIGHgOPbFGjUXIQoiY_Alist_N3_chExpln"), "visible"); scAssmntMgr.setMode(sc$("YMoXIGHgOPbFGjUXIQoiY_Alist_N_score"), "visible");
+
+	},
+	fct_reset : function(){
+var vSess="";
+scServices.assmntMgr.resetResponses(this.fId, vSess);
+scServices.assmntMgr.setPts(this.fId, vSess, null, null, null); 
+this.initSeq("play");
+
+	},
+
+	closeSeq: function(){
+		var vForm = document.forms.YMoXIGHgOPbFGjUXIQoiY_Alist_form;
+		switch(this.fCurSeq) {
+
+	case "play" : {
+
+		break;
+	}
+
+		}
+		this.fCurSeq = null;
+	},
+	getOnLoadSeq:function() {
+
+			return "play";
+
+	return null;
+	},
+
+	refreshScoresFeedbacks : function(){
+		
+
+		var vScoreNode = sc$("YMoXIGHgOPbFGjUXIQoiY_Alist_SN6b");
+
+		var vScore = (Math.round((this.fScorePts-this.fMinPts) / (this.fMaxPts-this.fMinPts) * 100) * 1)+ 0;
+if(vScore > 99 && true) {
+			vScoreNode.innerHTML = "<span>"  + "Bonne réponse<\/span>";
+			vScoreNode.className = "answBest";
+		} else if(vScore > 49 && vScore <= 99 && true) {
+			vScoreNode.innerHTML = "<span>" + vScore + "% de bonnes réponses<\/span>";
+			vScoreNode.className = "answGood";
+		} else if(vScore > 0 && vScore <= 49 && true) {
+			vScoreNode.innerHTML = "<span>" + vScore + "% de bonnes réponses<\/span>";
+			vScoreNode.className = "answBad";
+		} else if(vScore <= 0 && true) {
+			vScoreNode.innerHTML = "<span>"  + "Mauvaise réponse <\/span>";
+			vScoreNode.className = "answWorst";
+		} else  {
+			vScoreNode.innerHTML = "";
+			vScoreNode.className = "";
+		}
+
+	},
+	solIsShown : false,
+	setSolution : function(pShown){
+		var vTR = document.forms.YMoXIGHgOPbFGjUXIQoiY_Alist_form.firstChild;
+		while(vTR.nodeType!=1) vTR = vTR.nextSibling;
+		vTR = vTR.firstChild;
+		while(vTR.nodeType!=1) vTR = vTR.nextSibling;
+		if(vTR.nodeName.toLowerCase()=="tbody") vTR = vTR.firstChild;
+		while(vTR.nodeType!=1) vTR = vTR.nextSibling;
+		if(!pShown && this.solIsShown) {
+			while(vTR) {
+				if(vTR.nodeName.toLowerCase()=="tr") {
+					var vOffs = vTR.className.indexOf("assmntSol");
+					if(vOffs>=0) vTR.className = vTR.className.substring(0, vOffs) + vTR.className.substring(vOffs+14);
+				}
+				vTR = vTR.nextSibling;
+			}
+		} else if(pShown && ! this.solIsShown) {
+
+			while(vTR.nodeName.toLowerCase()!="tr") vTR = vTR.nextSibling;
+			vTR.className = "assmntSolUnche " + vTR.className;
+			vTR = vTR.nextSibling;
+
+			while(vTR.nodeName.toLowerCase()!="tr") vTR = vTR.nextSibling;
+			vTR.className = "assmntSolUnche " + vTR.className;
+			vTR = vTR.nextSibling;
+
+			while(vTR.nodeName.toLowerCase()!="tr") vTR = vTR.nextSibling;
+			vTR.className = "assmntSolUnche " + vTR.className;
+			vTR = vTR.nextSibling;
+
+			while(vTR.nodeName.toLowerCase()!="tr") vTR = vTR.nextSibling;
+			vTR.className = "assmntSolCheck " + vTR.className;
+			vTR = vTR.nextSibling;
+
+		}
+		this.solIsShown = pShown;
+	},
+	onLoad: function(){
+		this.initSeq(this.getOnLoadSeq()); 
+		var vNodeRoot = sc$("YMoXIGHgOPbFGjUXIQoiY_Alist_A");
+		vNodeRoot.style.display = "block"; 
+	},
+	onUnload: function(){
+		this.closeSeq();
+	},
+	loadSortKey: "A",
+	unloadSortKey: "A"
+};
+
+scOnLoads[scOnLoads.length] = YMoXIGHgOPbFGjUXIQoiY_Alist;
+scOnUnloads[scOnUnloads.length] = YMoXIGHgOPbFGjUXIQoiY_Alist;
+</script><div id="YMoXIGHgOPbFGjUXIQoiY_Alist_A" style="display:none;"><div class="headerQ"><div id="YMoXIGHgOPbFGjUXIQoiY_Alist_N_question" class="question"><div><p class="op_txt_p">$X$154 signifie que...</p></div></div></div><div class="scoreBox"><div class="score " aria-live="polite" id="YMoXIGHgOPbFGjUXIQoiY_Alist_N_score"><div id="YMoXIGHgOPbFGjUXIQoiY_Alist_SN6b"><span></span></div></div></div><div id="YMoXIGHgOPbFGjUXIQoiY_Alist_N_choiceList"><form action name="YMoXIGHgOPbFGjUXIQoiY_Alist_form" id="YMoXIGHgOPbFGjUXIQoiY_Alist_form"><table class="choiceList "><tr class="choiceList_ch "><td class="choiceList_in "><input type="checkbox" name="YMoXIGHgOPbFGjUXIQoiY_Alist_0" id="YMoXIGHgOPbFGjUXIQoiY_Alist_0" value="0" onclick="YMoXIGHgOPbFGjUXIQoiY_Alist.setResp(this, 0);"></td><td class="choiceList_la "><div id="YMoXIGHgOPbFGjUXIQoiY_Alist_N0_choice" class="choice"><div id="YMoXIGHgOPbFGjUXIQoiY_Alist_N0_label" class="label"><p class="op_txt_p">La ligne X est fig&eacute;e et que la colonne 154 ne l'est pas.</p></div></div></td></tr><tr class="choiceList_ch "><td class="choiceList_in "><input type="checkbox" name="YMoXIGHgOPbFGjUXIQoiY_Alist_1" id="YMoXIGHgOPbFGjUXIQoiY_Alist_1" value="1" onclick="YMoXIGHgOPbFGjUXIQoiY_Alist.setResp(this, 1);"></td><td class="choiceList_la "><div id="YMoXIGHgOPbFGjUXIQoiY_Alist_N1_choice" class="choice"><div id="YMoXIGHgOPbFGjUXIQoiY_Alist_N1_label" class="label"><p class="op_txt_p">C'est la colonne 154 qui est fig&eacute;e et que la ligne X ne bougera pas.</p></div></div></td></tr><tr class="choiceList_ch "><td class="choiceList_in "><input type="checkbox" name="YMoXIGHgOPbFGjUXIQoiY_Alist_2" id="YMoXIGHgOPbFGjUXIQoiY_Alist_2" value="2" onclick="YMoXIGHgOPbFGjUXIQoiY_Alist.setResp(this, 2);"></td><td class="choiceList_la "><div id="YMoXIGHgOPbFGjUXIQoiY_Alist_N2_choice" class="choice"><div id="YMoXIGHgOPbFGjUXIQoiY_Alist_N2_label" class="label"><p class="op_txt_p">La ligne X est fig&eacute;e et la colonne 154 est fig&eacute;e &eacute;galement. </p></div></div></td></tr><tr class="choiceList_ch "><td class="choiceList_in "><input type="checkbox" name="YMoXIGHgOPbFGjUXIQoiY_Alist_3" id="YMoXIGHgOPbFGjUXIQoiY_Alist_3" value="3" onclick="YMoXIGHgOPbFGjUXIQoiY_Alist.setResp(this, 3);"></td><td class="choiceList_la "><div id="YMoXIGHgOPbFGjUXIQoiY_Alist_N3_choice" class="choice"><div id="YMoXIGHgOPbFGjUXIQoiY_Alist_N3_label" class="label"><p class="op_txt_p">Aucune de ces r&eacute;ponses.</p></div><div class="chExpln " id="YMoXIGHgOPbFGjUXIQoiY_Alist_N3_chExpln"><p class="op_txt_p">Effectivement, ce n'est aucune de ces r&eacute;ponses car X fait r&eacute;f&eacute;rence &agrave; une colonne et non &agrave; une ligne. M&ecirc;me chose pour 154 qui fait r&eacute;f&eacute;rence &agrave; une ligne et non &agrave; une colonne.</p></div></div></td></tr></table></form></div></div></div></div><div class="subQuiz "><h3 class="subQuiz_ti"><span>Exercice</span></h3><div class="subQuiz_co "><script type="text/JavaScript">
+var K8AXnR9rgkb5gOlANTunib_Alist = {
+
+	fId : "K8AXnR9rgkb5gOlANTunib",
+	fCurSeq : null,
+	initSeq : function(pCodeSeq){
+	try {
+		if(pCodeSeq==null) return;
+		if(this.fCurSeq!=null) this.closeSeq();
+		this.fCurSeq = pCodeSeq;
+		switch(this.fCurSeq) {
+case "play" : {
+		var vForm = document.forms.K8AXnR9rgkb5gOlANTunib_Alist_form;
+		for (var i=0; i < vForm.length; i++) {
+			vForm.elements[i].disabled = false;
+			vForm.elements[i].checked = false;
+		}
+
+var vLoadRespSession = "";
+var vResp = scServices.assmntMgr.getResponse(this.fId, vLoadRespSession, "choice");
+		if(vResp != null) sc$("K8AXnR9rgkb5gOlANTunib_Alist_"+vResp).checked = true;
+
+		this.setSolution(false);
+scAssmntMgr.setMode(sc$("K8AXnR9rgkb5gOlANTunib_Alist_N_choiceList"), "visible");
+scAssmntMgr.setMode(sc$("K8AXnR9rgkb5gOlANTunib_Alist_N_gExpln"), "collapsed");
+scAssmntMgr.setMode(sc$("K8AXnR9rgkb5gOlANTunib_Alist_N_question"), "visible");
+scAssmntMgr.setMode(sc$("K8AXnR9rgkb5gOlANTunib_Alist_N_score"), "invisible");
+scAssmntMgr.setMode(sc$("K8AXnR9rgkb5gOlANTunib_Alist_N0_choice"), "visible");
+scAssmntMgr.setMode(sc$("K8AXnR9rgkb5gOlANTunib_Alist_N1_choice"), "visible");
+scAssmntMgr.setMode(sc$("K8AXnR9rgkb5gOlANTunib_Alist_N0_label"), "visible");
+scAssmntMgr.setMode(sc$("K8AXnR9rgkb5gOlANTunib_Alist_N1_label"), "visible");
+scAssmntMgr.setMode(sc$("K8AXnR9rgkb5gOlANTunib_Alist_N0_chExpln"), "collapsed");
+scAssmntMgr.setMode(sc$("K8AXnR9rgkb5gOlANTunib_Alist_N1_chExpln"), "collapsed");
+var vRespSession = "";
+		if(scServices.assmntMgr.getCompletionStatus(this.fId, vRespSession)=="notAttempt") scServices.assmntMgr.setCompletionStatus(this.fId, vRespSession, "attempt");
+		this.setResp = function(pInput, pIdx) {
+			scServices.assmntMgr.setResponse(this.fId, vRespSession, "choice", pIdx);
+
+			this.computeScore();
+			scServices.assmntMgr.commit();
+		}				
+
+		this.computeScore = function() {
+
+		this.fMinPts = 0;
+		this.fMaxPts = 1;
+		this.fScorePts = document.forms.K8AXnR9rgkb5gOlANTunib_Alist_form.K8AXnR9rgkb5gOlANTunib_Alist_radio[1].checked ?  this.fMaxPts : this.fMinPts;
+
+				this.fScorePts = 0 + (this.fScorePts-this.fMinPts) / (this.fMaxPts-this.fMinPts) * (1 - 0); 
+
+			this.fMinPts = 0;
+
+			this.fMaxPts = 1;
+
+		//alert("score:::::"+this.fMinPts+" - "+this.fScorePts+" - "+this.fMaxPts);
+var vScoreSession = "";
+		if(this.fScorePts != null) scServices.assmntMgr.setPts(this.fId, vScoreSession, this.fMinPts, this.fScorePts, this.fMaxPts);
+
+			this.refreshScoresFeedbacks();
+		}
+
+if(vRespSession != vLoadRespSession) {
+for(var i = 0; i < vForm.length; i++) if(vForm.elements[i].checked) break;
+		scServices.assmntMgr.setResponse(this.fId, vRespSession, "choice", (i < vForm.length) ? vForm.elements[i].value : null);
+}
+this.computeScore();
+
+		scServices.assmntMgr.commit();
+		break;
+	}
+
+		}
+	}catch(e){alert("failed:::"+e)};
+	},
+	fct_play : function(){
+this.initSeq("play");
+
+	},
+	fct_displaySol : function(){
+var vForm=document.forms.K8AXnR9rgkb5gOlANTunib_Alist_form; for (var i=0; i < vForm.length; i++) vForm.elements[i].disabled = true; this.setSolution(true); scAssmntMgr.setMode(sc$("K8AXnR9rgkb5gOlANTunib_Alist_N_gExpln"), "visible");
+scAssmntMgr.setMode(sc$("K8AXnR9rgkb5gOlANTunib_Alist_N0_chExpln"), "visible"); scAssmntMgr.setMode(sc$("K8AXnR9rgkb5gOlANTunib_Alist_N1_chExpln"), "visible"); scAssmntMgr.setMode(sc$("K8AXnR9rgkb5gOlANTunib_Alist_N_score"), "visible");
+
+	},
+	fct_reset : function(){
+var vSess="";
+scServices.assmntMgr.resetResponses(this.fId, vSess);
+scServices.assmntMgr.setPts(this.fId, vSess, null, null, null); 
+this.initSeq("play");
+
+	},
+
+	closeSeq: function(){
+		var vForm = document.forms.K8AXnR9rgkb5gOlANTunib_Alist_form;
+		switch(this.fCurSeq) {
+
+	case "play" : {
+
+		break;
+	}
+
+		}
+		this.fCurSeq = null;
+	},
+	getOnLoadSeq:function() {
+
+			return "play";
+
+	return null;
+	},
+
+	refreshScoresFeedbacks : function(){
+		
+
+		var vScoreNode = sc$("K8AXnR9rgkb5gOlANTunib_Alist_SN6b");
+
+		var vScore = (Math.round((this.fScorePts-this.fMinPts) / (this.fMaxPts-this.fMinPts) * 100) * 1)+ 0;
+if(vScore > 99 && true) {
+			vScoreNode.innerHTML = "<span>"  + "Bonne réponse<\/span>";
+			vScoreNode.className = "answBest";
+		} else if(vScore > 49 && vScore <= 99 && true) {
+			vScoreNode.innerHTML = "<span>" + vScore + "% de bonnes réponses<\/span>";
+			vScoreNode.className = "answGood";
+		} else if(vScore > 0 && vScore <= 49 && true) {
+			vScoreNode.innerHTML = "<span>" + vScore + "% de bonnes réponses<\/span>";
+			vScoreNode.className = "answBad";
+		} else if(vScore <= 0 && true) {
+			vScoreNode.innerHTML = "<span>"  + "Mauvaise réponse <\/span>";
+			vScoreNode.className = "answWorst";
+		} else  {
+			vScoreNode.innerHTML = "";
+			vScoreNode.className = "";
+		}
+
+	},
+	solIsShown : false,
+	setSolution : function(pShown){
+		var vTR = document.forms.K8AXnR9rgkb5gOlANTunib_Alist_form.firstChild;
+		while(vTR.nodeType!=1) vTR = vTR.nextSibling;
+		vTR = vTR.firstChild;
+		while(vTR.nodeType!=1) vTR = vTR.nextSibling;
+		if(vTR.nodeName.toLowerCase()=="tbody") vTR = vTR.firstChild;
+		while(vTR.nodeType!=1) vTR = vTR.nextSibling;
+		if(!pShown && this.solIsShown) {
+			while(vTR) {
+				if(vTR.nodeName.toLowerCase()=="tr") {
+					var vOffs = vTR.className.indexOf("assmntSol");
+					if(vOffs>=0) vTR.className = vTR.className.substring(0, vOffs) + vTR.className.substring(vOffs+14);
+				}
+				vTR = vTR.nextSibling;
+			}
+		} else if(pShown && ! this.solIsShown) {
+
+			var vIdx = 0;
+			while(vTR) {
+				if(vTR.nodeName.toLowerCase()=="tr") {
+					vIdx++;
+					vTR.className = ( vIdx == 2 ? "assmntSolRight " : "assmntSolWrong ") + vTR.className;
+				}
+				vTR = vTR.nextSibling;
+			}
+
+		}
+		this.solIsShown = pShown;
+	},
+	onLoad: function(){
+		this.initSeq(this.getOnLoadSeq()); 
+		var vNodeRoot = sc$("K8AXnR9rgkb5gOlANTunib_Alist_A");
+		vNodeRoot.style.display = "block"; 
+	},
+	onUnload: function(){
+		this.closeSeq();
+	},
+	loadSortKey: "A",
+	unloadSortKey: "A"
+};
+
+scOnLoads[scOnLoads.length] = K8AXnR9rgkb5gOlANTunib_Alist;
+scOnUnloads[scOnUnloads.length] = K8AXnR9rgkb5gOlANTunib_Alist;
+</script><div id="K8AXnR9rgkb5gOlANTunib_Alist_A" style="display:none;"><div class="headerQ"><div id="K8AXnR9rgkb5gOlANTunib_Alist_N_question" class="question"><div><p class="op_txt_p">Je peux &eacute;crire cette formule&nbsp;: <strong class="op_txt_is_emp">=A5+7</strong></p></div></div></div><div class="scoreBox"><div class="score " aria-live="polite" id="K8AXnR9rgkb5gOlANTunib_Alist_N_score"><div id="K8AXnR9rgkb5gOlANTunib_Alist_SN6b"><span></span></div></div></div><div id="K8AXnR9rgkb5gOlANTunib_Alist_N_choiceList"><form action name="K8AXnR9rgkb5gOlANTunib_Alist_form" id="K8AXnR9rgkb5gOlANTunib_Alist_form"><table class="choiceList "><tr class="choiceList_ch "><td class="choiceList_in "><input type="radio" name="K8AXnR9rgkb5gOlANTunib_Alist_radio" id="K8AXnR9rgkb5gOlANTunib_Alist_0" value="0" onclick="K8AXnR9rgkb5gOlANTunib_Alist.setResp(this, 0);"></td><td class="choiceList_la "><div id="K8AXnR9rgkb5gOlANTunib_Alist_N0_choice" class="choice"><div id="K8AXnR9rgkb5gOlANTunib_Alist_N0_label" class="label"><p class="op_txt_p">Non, car je ne peux pas m&eacute;langer les r&eacute;f&eacute;rences &agrave; une cellule et une valeur num&eacute;rique.</p></div></div></td></tr><tr class="choiceList_ch "><td class="choiceList_in "><input type="radio" name="K8AXnR9rgkb5gOlANTunib_Alist_radio" id="K8AXnR9rgkb5gOlANTunib_Alist_1" value="1" onclick="K8AXnR9rgkb5gOlANTunib_Alist.setResp(this, 1);"></td><td class="choiceList_la "><div id="K8AXnR9rgkb5gOlANTunib_Alist_N1_choice" class="choice"><div id="K8AXnR9rgkb5gOlANTunib_Alist_N1_label" class="label"><p class="op_txt_p">Oui, car cela va r&eacute;cup&eacute;rer la valeur de la cellule A5 et va r&eacute;aliser la somme de A5 et de 7</p></div></div></td></tr></table></form></div></div></div></div><div class="subQuiz "><h3 class="subQuiz_ti"><span>Exercice</span></h3><div class="subQuiz_co "><script type="text/JavaScript">
+var VREHa1YIAMeFIsQJ18BRAg_Alist = {
+
+	fId : "VREHa1YIAMeFIsQJ18BRAg",
+	fCurSeq : null,
+	initSeq : function(pCodeSeq){
+	try {
+		if(pCodeSeq==null) return;
+		if(this.fCurSeq!=null) this.closeSeq();
+		this.fCurSeq = pCodeSeq;
+		switch(this.fCurSeq) {
+
+		case "play" : {
+		var vForm = document.forms.VREHa1YIAMeFIsQJ18BRAg_Alist_form;
+		this._Sol = {N142:{s:[{isMatch:function(pResp){if(typeof pResp == 'undefined') return false; pResp=pResp.toUpperCase(); return '$B$5'==pResp || false;}, score:1},null],min:0,max:1},_:null};
+		this.getSolIdx = function(pFieldIndex){
+			var vF = this._Sol[pFieldIndex];
+			var vVal = vForm[pFieldIndex].value;
+			for (var i = 0; i < vF.s.length-1; i++) if(vF.s[i].isMatch(vVal)) return i;
+			return -1;
+		};
+		this.getFieldScore = function(pFieldIndex) {
+			var vI = this.getSolIdx(pFieldIndex);
+			if(vI >= 0) return this._Sol[pFieldIndex].s[vI].score;
+			return 0;
+		};
+		this.refreshResultInput = function(pInput){
+			if(this._resultDisplay == "none") pInput.parentNode.className="";
+			else {
+				var vSol = this._Sol[pInput.name];
+				var vRes = Math.round((this.getFieldScore(pInput.name) - vSol.min) / (vSol.max - vSol.min) * 1);
+				pInput.parentNode.className= "assmntResult_" + vRes;
+			}
+		};
+var vLoadRespSession = "";
+
+		for (var i=0; i < vForm.length; i++) {
+			var vFi = vForm.elements[i];
+			this.setInteraction(vFi, "enabled");
+			vFi.value = vLoadRespSession == null ? "" : scServices.assmntMgr.getResponse(this.fId, vLoadRespSession, vFi.name) || "";
+		}
+	this.refreshResult("none");
+
+
+		this.setSolution('collapsed', 'collapsed');
+scAssmntMgr.setMode(sc$("VREHa1YIAMeFIsQJ18BRAg_Alist_N_question"), "visible");
+scAssmntMgr.setMode(sc$("VREHa1YIAMeFIsQJ18BRAg_Alist_N_score"), "invisible");
+var vRespSession = "";
+		if(scServices.assmntMgr.getCompletionStatus(this.fId, vRespSession)=="notAttempt") scServices.assmntMgr.setCompletionStatus(this.fId, vRespSession, "attempt");
+		this.setResp = function(pInput) {
+			scServices.assmntMgr.setResponse(this.fId, vRespSession, pInput.name, pInput.value);
+			this.computeScore();
+			scServices.assmntMgr.commit();
+			this.refreshResultInput(pInput);
+		}				
+
+		this.computeScore = function() {
+
+			this.fMinPts = 0;
+			this.fMaxPts = 0;
+			for(var vF in this._Sol) if(vF!="_") {this.fMinPts += this._Sol[vF].min; this.fMaxPts += this._Sol[vF].max;}
+			this.fScorePts = this.getFieldScore("N142")+0;
+
+				this.fScorePts = 0 + (this.fScorePts-this.fMinPts) / (this.fMaxPts-this.fMinPts) * (1 - 0); 
+
+			this.fMinPts = 0;
+
+			this.fMaxPts = 1;
+
+			//alert("score:::::"+this.fMinPts+" - "+this.fScorePts+" - "+this.fMaxPts);
+var vScoreSession = "";
+			if(this.fScorePts != null) scServices.assmntMgr.setPts(this.fId, vScoreSession, this.fMinPts, this.fScorePts, this.fMaxPts);
+
+			this.refreshScoresFeedbacks();
+		}
+
+if(vRespSession != vLoadRespSession) for (var i=0; i < vForm.length; i++) scServices.assmntMgr.setResponse(this.fId, vRespSession, vForm.elements[i].name, vForm.elements[i].value);
+this.computeScore();
+
+		scServices.assmntMgr.commit();
+		break;
+	}
+
+		}
+	}catch(e){alert("failed:::"+e)};
+	},
+	fct_play : function(){
+this.initSeq("play");
+
+	},
+	fct_reset : function(){
+var vSess="";
+scServices.assmntMgr.resetResponses(this.fId, vSess);
+scServices.assmntMgr.setPts(this.fId, vSess, null, null, null); 
+this.initSeq("play");
+
+	},
+	fct_displaySol : function(){
+this.setSolution('collapsed', 'visible'); this.refreshResult("none");scAssmntMgr.setMode(sc$("VREHa1YIAMeFIsQJ18BRAg_Alist_N_score"), "visible");
+var vForm=document.forms.VREHa1YIAMeFIsQJ18BRAg_Alist_form; for (var i=0; i < vForm.length; i++) this.setInteraction(vForm.elements[i], "disabled"); 
+	},
+
+	closeSeq: function(){
+		var vForm = document.forms.VREHa1YIAMeFIsQJ18BRAg_Alist_form;
+		switch(this.fCurSeq) {
+
+	case "play" : {
+
+		break;
+	}
+
+		}
+		this.fCurSeq = null;
+	},
+	getOnLoadSeq:function() {
+
+			return "play";
+
+	return null;
+	},
+
+	refreshScoresFeedbacks : function(){
+		
+
+		var vScoreNode = sc$("VREHa1YIAMeFIsQJ18BRAg_Alist_SN6c");
+
+		var vScore = (Math.round((this.fScorePts-this.fMinPts) / (this.fMaxPts-this.fMinPts) * 100) * 1)+ 0;
+if(vScore > 99 && true) {
+			vScoreNode.innerHTML = "<span>"  + "Bonne réponse<\/span>";
+			vScoreNode.className = "answBest";
+		} else if(vScore > 49 && vScore <= 99 && true) {
+			vScoreNode.innerHTML = "<span>" + vScore + "% de bonnes réponses<\/span>";
+			vScoreNode.className = "answGood";
+		} else if(vScore > 0 && vScore <= 49 && true) {
+			vScoreNode.innerHTML = "<span>" + vScore + "% de bonnes réponses<\/span>";
+			vScoreNode.className = "answBad";
+		} else if(vScore <= 0 && true) {
+			vScoreNode.innerHTML = "<span>"  + "Mauvaise réponse <\/span>";
+			vScoreNode.className = "answWorst";
+		} else  {
+			vScoreNode.innerHTML = "";
+			vScoreNode.className = "";
+		}
+
+	},
+	setSolution : function(pIfRight, pIfNotBest){
+		for(var vF in this._Sol) if(vF != "_") scAssmntMgr.setMode(sc$("VREHa1YIAMeFIsQJ18BRAg_Alist_X_"+vF), this.getSolIdx(vF)==0 ? pIfRight || "collapsed" : pIfNotBest || "collapsed");
+	},
+	setInteraction : function(pElt, pMode){
+		if(!pElt) return;
+		switch(pMode) {
+		case "collapsed" :
+			pElt.style.display = "none";
+			if("scSiLib" in window) scSiLib.fireResizedNode(pElt);
+			break;
+		case "invisible" :
+			pElt.style.display = "";
+			pElt.style.visibility = "hidden";
+			if("scSiLib" in window) scSiLib.fireResizedNode(pElt);
+			break;
+		case "enabled" : 
+		case "disabled" : 
+			pElt.disabled = (pMode=="disabled");
+		default :
+			pElt.style.display = "";
+			pElt.style.visibility = "visible";
+			if("scSiLib" in window) scSiLib.fireResizedNode(pElt);
+		}
+	},
+	refreshResult : function(pMode){
+		this._resultDisplay = pMode || "none";
+		var vForm = document.forms.VREHa1YIAMeFIsQJ18BRAg_Alist_form;
+		for (var i=0; i < vForm.length; i++) this.refreshResultInput(vForm.elements[i]);
+	},
+	onLoad: function(){
+		this.initSeq(this.getOnLoadSeq()); 
+		var vNodeRoot = sc$("VREHa1YIAMeFIsQJ18BRAg_Alist_A");
+		vNodeRoot.style.display = "block"; 
+	},
+	onUnload: function(){
+		this.closeSeq();
+	},
+	loadSortKey: "A",
+	unloadSortKey: "A"
+};
+
+scOnLoads[scOnLoads.length] = VREHa1YIAMeFIsQJ18BRAg_Alist;
+scOnUnloads[scOnUnloads.length] = VREHa1YIAMeFIsQJ18BRAg_Alist;
+</script><div id="VREHa1YIAMeFIsQJ18BRAg_Alist_A" style="display:none;"><div class="headerQ"><div id="VREHa1YIAMeFIsQJ18BRAg_Alist_N_question" class="question"></div></div><div class="scoreBox"><div class="score " aria-live="polite" id="VREHa1YIAMeFIsQJ18BRAg_Alist_N_score"><div id="VREHa1YIAMeFIsQJ18BRAg_Alist_SN6c"><span></span></div></div></div><form action="javascript:void(0);" name="VREHa1YIAMeFIsQJ18BRAg_Alist_form" id="VREHa1YIAMeFIsQJ18BRAg_Alist_form"><p class="op_clozeTxt_p">S&eacute;lectionne une r&eacute;f&eacute;rence absolue&nbsp;:<span class="op_clozeTxt_tl_gap"><span><select name="N142" onblur="VREHa1YIAMeFIsQJ18BRAg_Alist.setResp(this);"><option value><option value="D4">D4<option value="M$6">M$6<option value="$B$5">$B$5</select></span><span id="VREHa1YIAMeFIsQJ18BRAg_Alist_X_N142" class="gapAnswer "><span>$B$5</span></span></span></p></form></div></div></div><div class="subQuiz "><h3 class="subQuiz_ti"><span>Exercice</span></h3><div class="subQuiz_co "><script type="text/JavaScript">
+var sgWRlkh0yzeyqhlpmioe3c_Alist = {
+
+	fId : "sgWRlkh0yzeyqhlpmioe3c",
+	fCurSeq : null,
+	initSeq : function(pCodeSeq){
+	try {
+		if(pCodeSeq==null) return;
+		if(this.fCurSeq!=null) this.closeSeq();
+		this.fCurSeq = pCodeSeq;
+		switch(this.fCurSeq) {
+case "play" : {
+		var vForm = document.forms.sgWRlkh0yzeyqhlpmioe3c_Alist_form;
+		for (var i=0; i < vForm.length; i++) {
+			vForm.elements[i].disabled = false;
+			vForm.elements[i].checked = false;
+		}
+
+var vLoadRespSession = "";
+var vResp = scServices.assmntMgr.getResponse(this.fId, vLoadRespSession, "choice");
+		if(vResp != null) sc$("sgWRlkh0yzeyqhlpmioe3c_Alist_"+vResp).checked = true;
+
+		this.setSolution(false);
+scAssmntMgr.setMode(sc$("sgWRlkh0yzeyqhlpmioe3c_Alist_N_choiceList"), "visible");
+scAssmntMgr.setMode(sc$("sgWRlkh0yzeyqhlpmioe3c_Alist_N_gExpln"), "collapsed");
+scAssmntMgr.setMode(sc$("sgWRlkh0yzeyqhlpmioe3c_Alist_N_question"), "visible");
+scAssmntMgr.setMode(sc$("sgWRlkh0yzeyqhlpmioe3c_Alist_N_score"), "invisible");
+scAssmntMgr.setMode(sc$("sgWRlkh0yzeyqhlpmioe3c_Alist_N0_choice"), "visible");
+scAssmntMgr.setMode(sc$("sgWRlkh0yzeyqhlpmioe3c_Alist_N1_choice"), "visible");
+scAssmntMgr.setMode(sc$("sgWRlkh0yzeyqhlpmioe3c_Alist_N0_label"), "visible");
+scAssmntMgr.setMode(sc$("sgWRlkh0yzeyqhlpmioe3c_Alist_N1_label"), "visible");
+scAssmntMgr.setMode(sc$("sgWRlkh0yzeyqhlpmioe3c_Alist_N0_chExpln"), "collapsed");
+scAssmntMgr.setMode(sc$("sgWRlkh0yzeyqhlpmioe3c_Alist_N1_chExpln"), "collapsed");
+var vRespSession = "";
+		if(scServices.assmntMgr.getCompletionStatus(this.fId, vRespSession)=="notAttempt") scServices.assmntMgr.setCompletionStatus(this.fId, vRespSession, "attempt");
+		this.setResp = function(pInput, pIdx) {
+			scServices.assmntMgr.setResponse(this.fId, vRespSession, "choice", pIdx);
+
+			this.computeScore();
+			scServices.assmntMgr.commit();
+		}				
+
+		this.computeScore = function() {
+
+		this.fMinPts = 0;
+		this.fMaxPts = 1;
+		this.fScorePts = document.forms.sgWRlkh0yzeyqhlpmioe3c_Alist_form.sgWRlkh0yzeyqhlpmioe3c_Alist_radio[1].checked ?  this.fMaxPts : this.fMinPts;
+
+				this.fScorePts = 0 + (this.fScorePts-this.fMinPts) / (this.fMaxPts-this.fMinPts) * (1 - 0); 
+
+			this.fMinPts = 0;
+
+			this.fMaxPts = 1;
+
+		//alert("score:::::"+this.fMinPts+" - "+this.fScorePts+" - "+this.fMaxPts);
+var vScoreSession = "";
+		if(this.fScorePts != null) scServices.assmntMgr.setPts(this.fId, vScoreSession, this.fMinPts, this.fScorePts, this.fMaxPts);
+
+			this.refreshScoresFeedbacks();
+		}
+
+if(vRespSession != vLoadRespSession) {
+for(var i = 0; i < vForm.length; i++) if(vForm.elements[i].checked) break;
+		scServices.assmntMgr.setResponse(this.fId, vRespSession, "choice", (i < vForm.length) ? vForm.elements[i].value : null);
+}
+this.computeScore();
+
+		scServices.assmntMgr.commit();
+		break;
+	}
+
+		}
+	}catch(e){alert("failed:::"+e)};
+	},
+	fct_play : function(){
+this.initSeq("play");
+
+	},
+	fct_displaySol : function(){
+var vForm=document.forms.sgWRlkh0yzeyqhlpmioe3c_Alist_form; for (var i=0; i < vForm.length; i++) vForm.elements[i].disabled = true; this.setSolution(true); scAssmntMgr.setMode(sc$("sgWRlkh0yzeyqhlpmioe3c_Alist_N_gExpln"), "visible");
+scAssmntMgr.setMode(sc$("sgWRlkh0yzeyqhlpmioe3c_Alist_N0_chExpln"), "visible"); scAssmntMgr.setMode(sc$("sgWRlkh0yzeyqhlpmioe3c_Alist_N1_chExpln"), "visible"); scAssmntMgr.setMode(sc$("sgWRlkh0yzeyqhlpmioe3c_Alist_N_score"), "visible");
+
+	},
+	fct_reset : function(){
+var vSess="";
+scServices.assmntMgr.resetResponses(this.fId, vSess);
+scServices.assmntMgr.setPts(this.fId, vSess, null, null, null); 
+this.initSeq("play");
+
+	},
+
+	closeSeq: function(){
+		var vForm = document.forms.sgWRlkh0yzeyqhlpmioe3c_Alist_form;
+		switch(this.fCurSeq) {
+
+	case "play" : {
+
+		break;
+	}
+
+		}
+		this.fCurSeq = null;
+	},
+	getOnLoadSeq:function() {
+
+			return "play";
+
+	return null;
+	},
+
+	refreshScoresFeedbacks : function(){
+		
+
+		var vScoreNode = sc$("sgWRlkh0yzeyqhlpmioe3c_Alist_SN6b");
+
+		var vScore = (Math.round((this.fScorePts-this.fMinPts) / (this.fMaxPts-this.fMinPts) * 100) * 1)+ 0;
+if(vScore > 99 && true) {
+			vScoreNode.innerHTML = "<span>"  + "Bonne réponse<\/span>";
+			vScoreNode.className = "answBest";
+		} else if(vScore > 49 && vScore <= 99 && true) {
+			vScoreNode.innerHTML = "<span>" + vScore + "% de bonnes réponses<\/span>";
+			vScoreNode.className = "answGood";
+		} else if(vScore > 0 && vScore <= 49 && true) {
+			vScoreNode.innerHTML = "<span>" + vScore + "% de bonnes réponses<\/span>";
+			vScoreNode.className = "answBad";
+		} else if(vScore <= 0 && true) {
+			vScoreNode.innerHTML = "<span>"  + "Mauvaise réponse <\/span>";
+			vScoreNode.className = "answWorst";
+		} else  {
+			vScoreNode.innerHTML = "";
+			vScoreNode.className = "";
+		}
+
+	},
+	solIsShown : false,
+	setSolution : function(pShown){
+		var vTR = document.forms.sgWRlkh0yzeyqhlpmioe3c_Alist_form.firstChild;
+		while(vTR.nodeType!=1) vTR = vTR.nextSibling;
+		vTR = vTR.firstChild;
+		while(vTR.nodeType!=1) vTR = vTR.nextSibling;
+		if(vTR.nodeName.toLowerCase()=="tbody") vTR = vTR.firstChild;
+		while(vTR.nodeType!=1) vTR = vTR.nextSibling;
+		if(!pShown && this.solIsShown) {
+			while(vTR) {
+				if(vTR.nodeName.toLowerCase()=="tr") {
+					var vOffs = vTR.className.indexOf("assmntSol");
+					if(vOffs>=0) vTR.className = vTR.className.substring(0, vOffs) + vTR.className.substring(vOffs+14);
+				}
+				vTR = vTR.nextSibling;
+			}
+		} else if(pShown && ! this.solIsShown) {
+
+			var vIdx = 0;
+			while(vTR) {
+				if(vTR.nodeName.toLowerCase()=="tr") {
+					vIdx++;
+					vTR.className = ( vIdx == 2 ? "assmntSolRight " : "assmntSolWrong ") + vTR.className;
+				}
+				vTR = vTR.nextSibling;
+			}
+
+		}
+		this.solIsShown = pShown;
+	},
+	onLoad: function(){
+		this.initSeq(this.getOnLoadSeq()); 
+		var vNodeRoot = sc$("sgWRlkh0yzeyqhlpmioe3c_Alist_A");
+		vNodeRoot.style.display = "block"; 
+	},
+	onUnload: function(){
+		this.closeSeq();
+	},
+	loadSortKey: "A",
+	unloadSortKey: "A"
+};
+
+scOnLoads[scOnLoads.length] = sgWRlkh0yzeyqhlpmioe3c_Alist;
+scOnUnloads[scOnUnloads.length] = sgWRlkh0yzeyqhlpmioe3c_Alist;
+</script><div id="sgWRlkh0yzeyqhlpmioe3c_Alist_A" style="display:none;"><div class="headerQ"><div id="sgWRlkh0yzeyqhlpmioe3c_Alist_N_question" class="question"><div><p class="op_txt_p">Lorsque j'utilise une valeur mixte (ou hybride), je ne peux figer que les colonnes.</p></div></div></div><div class="scoreBox"><div class="score " aria-live="polite" id="sgWRlkh0yzeyqhlpmioe3c_Alist_N_score"><div id="sgWRlkh0yzeyqhlpmioe3c_Alist_SN6b"><span></span></div></div></div><div id="sgWRlkh0yzeyqhlpmioe3c_Alist_N_choiceList"><form action name="sgWRlkh0yzeyqhlpmioe3c_Alist_form" id="sgWRlkh0yzeyqhlpmioe3c_Alist_form"><table class="choiceList "><tr class="choiceList_ch "><td class="choiceList_in "><input type="radio" name="sgWRlkh0yzeyqhlpmioe3c_Alist_radio" id="sgWRlkh0yzeyqhlpmioe3c_Alist_0" value="0" onclick="sgWRlkh0yzeyqhlpmioe3c_Alist.setResp(this, 0);"></td><td class="choiceList_la "><div id="sgWRlkh0yzeyqhlpmioe3c_Alist_N0_choice" class="choice"><div id="sgWRlkh0yzeyqhlpmioe3c_Alist_N0_label" class="label"><p class="op_txt_p">Vrai</p></div></div></td></tr><tr class="choiceList_ch "><td class="choiceList_in "><input type="radio" name="sgWRlkh0yzeyqhlpmioe3c_Alist_radio" id="sgWRlkh0yzeyqhlpmioe3c_Alist_1" value="1" onclick="sgWRlkh0yzeyqhlpmioe3c_Alist.setResp(this, 1);"></td><td class="choiceList_la "><div id="sgWRlkh0yzeyqhlpmioe3c_Alist_N1_choice" class="choice"><div id="sgWRlkh0yzeyqhlpmioe3c_Alist_N1_label" class="label"><p class="op_txt_p">Faux</p></div></div></td></tr></table></form></div><div class="gExpln " id="sgWRlkh0yzeyqhlpmioe3c_Alist_N_gExpln" aria-live="polite"><div><p class="op_txt_p">La bonne r&eacute;ponse est &quot;faux&quot; car il est possible de figer soit une colonne ($J8), soit une ligne (G$123)</p></div></div></div></div></div></div></div></div></div></div></div><div id="tplCoSpacer"></div></div></div></div><div id="tplRgt"><hr class="hidden"><a id="navigation" class="accessAnc" name="navigation" href="#navigation"></a><strong class="hidden">Navigation&nbsp;: </strong><a href="2_tableur_43.html" target="_self" class="navBtn prevBtn btnPrv" title="Pr&eacute;c&eacute;dent (Op&eacute;rations de base)"><span><img alt="Pr&eacute;c&eacute;dent" src="../skin/img/btn/prev.png" onmouseover="this.src='../skin/img/btn/prevOver.png';" onmouseout="this.src='../skin/img/btn/prev.png';" class="btnImg"><span class="btnLbl">Pr&eacute;c&eacute;dent</span></span></a><span class="hidden"> | </span><a href="2_tableur_44.html" target="_self" class="navBtn nextBtn btnNxt" title="Suivant (Moodle&nbsp;: Exercice&nbsp;- Op&eacute;rations de base)"><span><img alt="Suivant" src="../skin/img/btn/next.png" onmouseover="this.src='../skin/img/btn/nextOver.png';" onmouseout="this.src='../skin/img/btn/next.png';" class="btnImg"><span class="btnLbl">Suivant</span></span></a></div><div id="tplBtm"><hr class="hidden"><a id="footer" class="accessAnc" name="footer" href="#footer"></a><span id="tplBtmLeft"><a class="homeBtn " target="_self" href="tableur_web.html" title="Accueil"><span><img alt="Accueil" src="../skin/img/btn/home.png" onmouseover="this.src='../skin/img/btn/homeOver.png';" onmouseout="this.src='../skin/img/btn/home.png';" class="btnImg"><span class="btnLbl">Accueil</span></span></a><span class="hidden"> | </span><a href="#" onclick="window.print();return false;" class="printBtn" title="Imprimer la page"><span><img alt="Imprimer" src="../skin/img/btn/print.png" onmouseover="this.src='../skin/img/btn/printOver.png';" onmouseout="this.src='../skin/img/btn/print.png';" class="btnImg"><span class="btnLbl">Imprimer</span></span></a></span><span id="tplBtmIn"><span class="hidden"> | </span><span class="hidden"> | </span><a id="linkSp" target="_blank" href="http://scenari-platform.org" title="R&eacute;alis&eacute; avec Scenari (nouvelle fen&ecirc;tre)"><span><img alt="R&eacute;alis&eacute; avec Scenari (nouvelle fen&ecirc;tre)" src="../skin/img/struct/scBtn.png"></span></a></span></div></div>
+  <script type="text/JavaScript" src="../skin/js/skin.js"></script>
+  <script type="text/javascript">tplMgr.init();new scSiRuleAutoMarginW("tplCoMarginW","ide:tplCo",true,510,100);new scSiRuleFlexH("tplCoFlexTop","ide:tplCo",true,.3);scCodeMgr.init();outMgr.init("ide:tplMain","ide:tplMnu","ide:tplMnu/des:ul.mnu");scImgMgr.init();</script>
+ </body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <meta http-equiv="x-ua-compatible" content="IE=EDGE">
+  <title>Logiciel tableur - Exercice</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="S&eacute;bastien Fasbender ">
+  <meta name="keywords" content>
+  <meta name="date" content="17/02/2016">
+  <link rel="stylesheet" type="text/css" href="../wdgt/scCodeMgr/scCodeMgr.css">
+  <link rel="stylesheet" type="text/css" href="../wdgt/scImgMgr/scImgMgr.css">
+  <script type="text/JavaScript">
+/*0*/ var scServices = {};
+/*1*/ scServices["scLoad"] = {loadFromRoot:function(pUrl){window.location.href="../"+pUrl;}, getPathFromRoot:function(pPath){return "../"+pPath;}, getUrlFromRoot:function(pHref){if(!this.fRootOffset) this.fRootOffset = scCoLib.hrefBase().length-23; return pHref.substring(this.fRootOffset);},getRootUrl:function(){if(!this.fRootUrl) this.fRootUrl = scCoLib.hrefBase().substring(0,scCoLib.hrefBase().length-24); return this.fRootUrl;}};
+</script>
+  <!--[if lt IE 9]><script type="text/JavaScript" src="../wdgt/html5shiv/html5shiv.js"></script><![endif]--><script type="text/JavaScript" src="../lib-sm/scCoLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sm/scPaLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sm/scSiLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sm/scTiLib.js"></script>
+  <script type="text/JavaScript" src="../svc/scorm.js"></script>
+  <script type="text/JavaScript" src="../lib-sm/scMapMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-sm/scDynUiMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-sm/scTooltipMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-sm/scDragMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-sma/scAssmntMgr.js"></script>
+  <script type="text/JavaScript" src="../svc/scSearch/scSearch.js"></script>
+  <script type="text/JavaScript" src="../wdgt/tplMgr/tplMgr.js"></script>
+  <script type="text/JavaScript" src="../wdgt/dynSizes/dynSizes.js"></script>
+  <script type="text/JavaScript" src="../wdgt/outMgr/outMgr.js"></script>
+  <script type="text/JavaScript" src="../wdgt/scCodeMgr/scCodeMgr.js"></script>
+  <script type="text/JavaScript" src="../wdgt/searchMgr/searchMgr.js"></script>
+  <script type="text/JavaScript" src="../wdgt/scImgMgr/scImgMgr.js"></script>
+  <script type="text/JavaScript">
+/*0*/ try{var vCurrDir = scCoLib.hrefBase().substring(0,scCoLib.hrefBase().lastIndexOf("/")+1); if(window.opener && window.opener.location.href.lastIndexOf(vCurrDir, vCurrDir.length)==0 && window.opener.scServices) scServices = window.opener.scServices; else if(window.parent && window.parent.location.href.lastIndexOf(vCurrDir, vCurrDir.length)==0 && window.parent.scServices) scServices = window.parent.scServices;}catch(e){}
+scCodeMgr.registerCode("des:div.code");
+
+scImgMgr.registerGallery("des:div.galFra");
+
+scImgMgr.registerZoom("des:a.imgZoom",{toolbar:1,mag:1,titlePath:"par:/nsi:/chi:span.capTi"});
+
+</script>
+  <meta name="generator" content="SCENARI 4.1.11 / Opale 3.5.016 - http://scenari-platform.org/opale">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="revision" content="2016-10-03 07:56">
+  <link rel="start" href="tableur_web.html" title="Logiciel tableur">
+  <script type="text/JavaScript">
+outMgr.declareOutline("2_tableur.txt");
+	</script>
+  <link type="text/css" rel="stylesheet" href="../skin/css/html.css" media="all">
+  <link type="text/css" rel="stylesheet" href="../skin/css/struct_page.css" media="screen">
+  <link type="text/css" rel="stylesheet" href="../skin/css/buttons.css" media="screen">
+  <link type="text/css" rel="stylesheet" href="../skin/css/mnu_page.css" media="screen">
+  <link type="text/css" rel="stylesheet" href="../skin/css/mnu_child.css" media="screen">
+  <link type="text/css" rel="stylesheet" href="../skin/css/transf.css" media="all">
+  <link type="text/css" rel="stylesheet" href="../skin/css/indexes.css">
+  <link type="text/css" rel="stylesheet" href="../skin/css/assmnt.css">
+  <link type="text/css" rel="stylesheet" href="../skin/css/assmnt_train.css">
+  <link type="text/css" rel="stylesheet" href="../skin/css/sub_windows.css" media="screen">
+  <link type="text/css" rel="stylesheet" href="../skin/css/search.css" media="screen">
+  <!--[if IE]><link type="text/css" rel="stylesheet" href="../skin/css/ie.css" media="screen"/><![endif]-->
+  <!--[if lt IE 7]><link type="text/css" rel="stylesheet" href="../skin/css/ie6_page.css" media="screen"/><link type="text/css" rel="stylesheet" href="../skin/css/ie6_sub_windows.css" media="all"/><![endif]--><link type="text/css" rel="stylesheet" href="../skin/css/print.css" media="print">
+ </head>
+ <body>
+  <div id="tplFra"><div id="tplTop"><ul id="accessibility"><li class="tplWaiContent"><a class="waiBtn contentWaiBtn" href="#content" title="aller au contenu"><span>contenu</span></a></li><li class="tplWaiMenu"><a class="waiBtn menuWaiBtn" href="#menu" title="aller au menu"><span>menu</span></a></li><li class="tplWaiNav"><a class="waiBtn navWaiBtn" href="#navigation" title="aller &agrave; la navigation"><span>navigation</span></a></li><li class="tplWaiTools"><a class="waiBtn toolsWaiBtn" href="#tools" title="aller aux outils"><span>outils</span></a></li><li class="tplWaiFoot"><a class="waiBtn footWaiBtn" href="#footer" title="aller au pied de page"><span>pied de page</span></a></li></ul><noscript>Attention, votre navigateur ne supporte pas le javascript ou celui-ci a &eacute;t&eacute; d&eacute;sactiv&eacute;. Certaines fonctionnalit&eacute;s de ce module sont restreintes.</noscript><h1 id="titleRoot"><span>Logiciel tableur</span></h1></div><div id="tplLft"><hr class="hidden"><a id="tools" class="accessAnc" name="tools" href="#tools"></a><strong class="hidden">Mode&nbsp;: </strong><ul class="mnuMode"><li><span class="playBtnSel"><img alt="Cours" src="../skin/img/btn/playSel.png" class="btnImg"><span class="btnLbl">Cours</span></span></li><li><a class="modeBtn toolsBtn saveBtn " target="_self" href="tableur_web_1.html" title="Outils transverses"><span><img alt="Outils" src="../skin/img/btn/tools.png" onmouseover="this.src='../skin/img/btn/toolsOver.png';" onmouseout="this.src='../skin/img/btn/tools.png';" class="btnImg"><span class="btnLbl">Outils</span></span></a></li></ul></div><div id="tplMain" class="tplMainMnu_open"><div id="tplMnu"><hr class="hidden"><a id="menu" class="accessAnc" name="menu" href="#menu"></a><strong class="hidden">Menu&nbsp;: </strong><div class="mnuBlock"></div><div class="mnuFra"><ul class="mnu mnu_static  mnu_sch_no"><li class="mnu_sel_no mnu_l mnu_dpt_0 mnu_obj"><div class="mnuLbl mnu_sel_no mnu_l mnu_dpt_0 mnu_obj mnu_sch_no" id="2_tableur.html"><a href="2_tableur.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Objectifs</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_1.html"><a href="2_tableur_1.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>D&eacute;finitions</span></span></a></div><ul class="mnu_sub mnu_sub_o"><li class="mnu_sel_no mnu_l mnu_dpt_1 mnu_expUc"><div class="mnuLbl mnu_sel_no mnu_l mnu_dpt_1 mnu_expUc mnu_sch_no" id="2_tableur_2.html"><a href="2_tableur_2.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>D&eacute;finition</span></span></a></div></li><li class="mnu_sel_no mnu_l mnu_dpt_1 mnu_expUc"><div class="mnuLbl mnu_sel_no mnu_l mnu_dpt_1 mnu_expUc mnu_sch_no" id="2_tableur_25.html"><a href="2_tableur_25.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Tableur, classeur, feuilles et donn&eacute;es</span></span></a></div></li><li class="mnu_sel_no mnu_l mnu_dpt_1 mnu_expUc"><div class="mnuLbl mnu_sel_no mnu_l mnu_dpt_1 mnu_expUc mnu_sch_no" id="2_tableur_26.html"><a href="2_tableur_26.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Compl&eacute;tons la d&eacute;finition</span></span></a></div></li><li class="mnu_sel_yes mnu_l mnu_dpt_1 mnu_trainUc"><div class="mnuLbl mnu_sel_yes mnu_l mnu_dpt_1 mnu_trainUc mnu_sch_no" id="quizz01_Tableur.html"><span class="mnu_i"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Exercice</span></span></span></div></li></ul></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_3.html"><a href="2_tableur_3.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>D&eacute;couverte du logiciel</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_5.html"><a href="2_tableur_5.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>R&eacute;f&eacute;rences de cellules et op&eacute;rations de base</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_7.html"><a href="2_tableur_7.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Fonctions math&eacute;matiques simples</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_9.html"><a href="2_tableur_9.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Mise en page simple</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_11.html"><a href="2_tableur_11.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Op&eacute;rations logiques</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_13.html"><a href="2_tableur_13.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Fonctions logiques</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_15.html"><a href="2_tableur_15.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Tableaux et repr&eacute;sentations graphiques</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_17.html"><a href="2_tableur_17.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Tableaux crois&eacute;s dynamiques</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_19.html"><a href="2_tableur_19.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Fonctions courantes</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_21.html"><a href="2_tableur_21.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Mise en page et impression</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_23.html"><a href="2_tableur_23.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Protection des donn&eacute;es</span></span></a></div></li></ul><script type="text/javascript">scServices.totalPages = 112;</script></div><div id="tplIco"><div class="decoTrainUc"></div></div></div><div id="tplCo"><div class="scroller"><hr class="hidden"><a id="content" class="accessAnc" name="content" href="#content"></a><strong class="hidden">Contenu&nbsp;: </strong><div id="tplCoMarginW" style><div id="tplCoFlexTop"></div><div class="mainContent"><p id="noJsWarn">Attention, votre navigateur ne supporte pas le javascript ou celui-ci a &eacute;t&eacute; d&eacute;sactiv&eacute;. Certaines fonctionnalit&eacute;s dynamiques de ce module sont restreintes.</p><script type="text/JavaScript">var vNoJsWarn = scPaLib.findNode("ide:noJsWarn");
+if (vNoJsWarn && vNoJsWarn.parentNode) vNoJsWarn.parentNode.removeChild(vNoJsWarn);
+</script><div class="divQuiz"><script type="text/JavaScript">
+var oLLdC8JAkhjp9ZmcV4TVDe = {
+
+	fId : "oLLdC8JAkhjp9ZmcV4TVDe",
+	fCurSeq : null,
+	initSeq : function(pCodeSeq){
+	try {
+		if(pCodeSeq==null) return;
+		if(this.fCurSeq!=null) this.closeSeq();
+		this.fCurSeq = pCodeSeq;
+		switch(this.fCurSeq) {
+case "play" : {
+
+	this.refreshResult = function(pDisplay){
+		if(pDisplay) this.fResultDisplay = pDisplay;
+		if(this.fResultDisplay == "none") for(var i=this.fLabels.length -1; i >=0; i--)  scDragMgr.helpers.delClass(this.fLabels[i],"ddLabel_Right","ddLabel_Wrong");
+		else for(var i=this.fLabels.length -1; i >=0; i--) {
+			var vLabel = this.fLabels[i];
+
+			var vOldClass = (vLabel.sG == vLabel.rG ) ? "ddLabel_Wrong" : "ddLabel_Right";
+			var vNewClass = (vLabel.sG == vLabel.rG ) ? "ddLabel_Right" : "ddLabel_Wrong";
+
+			scDragMgr.helpers.switchClass(vLabel, vOldClass, vNewClass);
+		}
+	};
+var vLoadRespSession = "";
+
+		for(var i = this.fLabels.length - 1; i >=0; i--) scDragMgr.setDraggable(this.fLabels[i], true);
+		this.load(vLoadRespSession);
+		this.synch();
+	this.fResultDisplay = "none";
+
+var vLoadScoreSession = "";
+		this.fMinPts = scServices.assmntMgr.getMinPts(this.fId, vLoadScoreSession);
+		this.fScorePts = scServices.assmntMgr.getScorePts(this.fId, vLoadScoreSession);
+		this.fMaxPts = scServices.assmntMgr.getMaxPts(this.fId, vLoadScoreSession);
+scAssmntMgr.setMode(sc$("oLLdC8JAkhjp9ZmcV4TVDe_N_score"), "invisible");
+scAssmntMgr.setMode(sc$("oLLdC8JAkhjp9ZmcV4TVDe_N_"), "visible");
+scAssmntMgr.setMode(sc$("oLLdC8JAkhjp9ZmcV4TVDe_N_gExpln"), "collapsed");
+scAssmntMgr.setMode(sc$("oLLdC8JAkhjp9ZmcV4TVDe_N_question"), "visible");
+scAssmntMgr.setToggleStatus(sc$("oLLdC8JAkhjp9ZmcV4TVDe_S_N67"), false);
+this.fRespSession = "";
+		if(scServices.assmntMgr.getCompletionStatus(this.fId, this.fRespSession)=="notAttempt") scServices.assmntMgr.setCompletionStatus(this.fId, this.fRespSession, "attempt");
+
+		this.computeScore = function() {
+this.fMinPts = 0;
+		this.fMaxPts = this.fLabels.length;
+		this.fScorePts = 0;
+		for(var i=this.fLabels.length -1; i >=0; i--) {
+			if(this.fLabels[i].sG == this.fLabels[i].rG) this.fScorePts += 1;
+		}
+
+		//alert("score:::::"+this.fMinPts+" - "+this.fScorePts+" - "+this.fMaxPts);
+var vScoreSession = "";
+		if(this.fScorePts != null) scServices.assmntMgr.setPts(this.fId, vScoreSession, this.fMinPts, this.fScorePts, this.fMaxPts);
+
+		this.refreshScoresFeedbacks();
+		this.refreshResult();
+	}
+
+if(this.fRespSession != vLoadRespSession) this.saveResp(this.fRespSession);
+
+		this.computeScore();
+
+		scServices.assmntMgr.commit();
+		break;
+	}
+
+		}
+	}catch(e){alert("failed:::"+e)};
+	},
+	onActionN8a : function(pButton){
+		if(scAssmntMgr.isDisabled(pButton)) return;
+var vSess="";
+scServices.assmntMgr.resetResponses(this.fId, vSess);
+scServices.assmntMgr.setPts(this.fId, vSess, null, null, null); 
+this.initSeq("play");
+
+		scServices.assmntMgr.commit();
+	},
+	onActionN67 : function(pButton){
+		if(scAssmntMgr.isDisabled(pButton)) return;
+		var vIsOn = scAssmntMgr.isToggleOn(pButton);
+		if(vIsOn) {
+scAssmntMgr.setMode(sc$("oLLdC8JAkhjp9ZmcV4TVDe_N_score"), "invisible");
+this.refreshResult("none");scAssmntMgr.setMode(sc$("oLLdC8JAkhjp9ZmcV4TVDe_N_gExpln"), "collapsed");
+
+		} else {
+scAssmntMgr.setMode(sc$("oLLdC8JAkhjp9ZmcV4TVDe_N_score"), "visible");
+this.refreshResult("addClass");scAssmntMgr.setMode(sc$("oLLdC8JAkhjp9ZmcV4TVDe_N_gExpln"), "visible");
+
+		}
+		scAssmntMgr.setToggleStatus(pButton, ! vIsOn);
+		scServices.assmntMgr.commit();
+	},
+	fct_play : function(){
+this.initSeq("play");
+
+	},
+	fct_reset : function(){
+var vSess="";
+scServices.assmntMgr.resetResponses(this.fId, vSess);
+scServices.assmntMgr.setPts(this.fId, vSess, null, null, null); 
+this.initSeq("play");
+
+	},
+	fct_displaySol : function(){
+this.refreshResult("addClass");scAssmntMgr.setMode(sc$("oLLdC8JAkhjp9ZmcV4TVDe_N_gExpln"), "visible");
+
+	},
+	fct_cleanSol : function(){
+this.refreshResult("none");scAssmntMgr.setMode(sc$("oLLdC8JAkhjp9ZmcV4TVDe_N_gExpln"), "collapsed");
+
+	},
+
+	closeSeq: function(){
+		var vForm = document.forms.oLLdC8JAkhjp9ZmcV4TVDe_form;
+		switch(this.fCurSeq) {
+case "play" : {
+		this.refreshResult("none");
+
+		break;
+	}
+
+		}
+		this.fCurSeq = null;
+	},
+	getOnLoadSeq:function() {
+
+			return "play";
+
+	return null;
+	},
+
+	saveResp:function(pSession){
+		if(pSession==null) return;
+		var vLabel = this.fLabels[0];
+		var vStr = "[{g:" + vLabel.rG + ",offs:" + vLabel.rO + "," + scDragMgr.saveLabelPos(vLabel) + "}";
+		for(var i=1, len=this.fLabels.length; i < len; i++) {
+			vLabel = this.fLabels[i];
+			vStr += ",{g:" + vLabel.rG + ",offs:" + vLabel.rO + "," + scDragMgr.saveLabelPos(vLabel) + "}";
+		}
+		vStr+="]";
+		scServices.assmntMgr.setResponse(this.fId, pSession, "pos", vStr);
+	},
+	load:function(pSession){
+		var vStr = (pSession!=null) ? scServices.assmntMgr.getResponse(this.fId, pSession, "pos") : null;
+		for(var i=this.fGroupsC.length -1; i >=0; i--) {
+			var vGroup = this.fGroupsC[i];
+			for(var j=vGroup.length-1; j >=0; j--) vGroup[j].labelsToAdd = [];
+		}
+		if(vStr) {
+						var vList = eval(vStr);
+			for(var i=0, len=this.fLabels.length; i < len; i++) {
+				var vLabelToAdd = vList[i];
+				vLabelToAdd.label = this.fLabels[i];
+				var vGroupC = this.fGroupsC[vLabelToAdd.g];
+				if(vGroupC.length == 1) vGroupC[0].labelsToAdd[vLabelToAdd.offs] = vLabelToAdd; 
+				else vGroupC[vLabelToAdd.offs].labelsToAdd.push(vLabelToAdd);
+			}
+		} else {
+						var vBasketC = this.fGroupsC[0];
+			for(var i=vBasketC.length-1; i >=0; i--) for(var j=0, vLen=vBasketC[i]._Labels.length; j < vLen; j++) vBasketC[i].labelsToAdd.push({label:vBasketC[i]._Labels[j]});
+		}
+		scDragMgr.repopulateContainers("oLLdC8JAkhjp9ZmcV4TVDe");
+	},
+	synch:function(){
+		for(var i=this.fGroupsC.length -1; i >=0; i--) {
+			var vGroup = this.fGroupsC[i];
+			var vOffset = 0;
+			for(var j=0, vLenJ=vGroup.length; j < vLenJ; j++) {
+				var vItems = scDragMgr.getLabels(vGroup[j]);
+				var vLenK = vItems.length;
+								if(vLenK == 0) vOffset++;
+				else for(var k=0; k < vLenK; k++) {
+					vItems[k].rG = i;
+					vItems[k].rO = vOffset++;
+				}
+			}
+		}
+	},
+	refreshScoresFeedbacks : function(){
+
+		var vScoreNode = sc$("oLLdC8JAkhjp9ZmcV4TVDe_SNaa");
+
+		var vScore = (Math.round((this.fScorePts-this.fMinPts) / (this.fMaxPts-this.fMinPts) * 100) * 1)+ 0;
+if(vScore > 99 && true) {
+			vScoreNode.innerHTML = "<span>"  + "Bonne réponse<\/span>";
+			vScoreNode.className = "answBest";
+		} else if(vScore > 49 && vScore <= 99 && true) {
+			vScoreNode.innerHTML = "<span>" + vScore + "% de bonnes réponses<\/span>";
+			vScoreNode.className = "answGood";
+		} else if(vScore > 0 && vScore <= 49 && true) {
+			vScoreNode.innerHTML = "<span>" + vScore + "% de bonnes réponses<\/span>";
+			vScoreNode.className = "answBad";
+		} else if(vScore <= 0 && true) {
+			vScoreNode.innerHTML = "<span>"  + "Mauvaise réponse <\/span>";
+			vScoreNode.className = "answWorst";
+		} else  {
+			vScoreNode.innerHTML = "";
+			vScoreNode.className = "";
+		}
+
+	},
+	onLoad: function(){
+	try{
+		var onChange = function() {
+oLLdC8JAkhjp9ZmcV4TVDe.synch();
+oLLdC8JAkhjp9ZmcV4TVDe.computeScore();
+oLLdC8JAkhjp9ZmcV4TVDe.saveResp(oLLdC8JAkhjp9ZmcV4TVDe.fRespSession);
+			scServices.assmntMgr.commit();
+		}
+		this.fLabels = [];
+		var vLabel, vC;
+scDragMgr.makeContainer("oLLdC8JAkhjp9ZmcV4TVDe", sc$("oLLdC8JAkhjp9ZmcV4TVDe_S_Nd3"), vC = sc$("oLLdC8JAkhjp9ZmcV4TVDe_S_Nd5"), sc$("oLLdC8JAkhjp9ZmcV4TVDe_S_Ne0")).setMode(vC, 'append', -1).setDragOverClass(vC, 'ddBasketDragOver');
+vLabel = sc$("oLLdC8JAkhjp9ZmcV4TVDe_LN2c");
+	this.fLabels.push(vLabel);
+	vLabel.sO=0;
+vLabel.sG=1;
+scDragMgr.makeDraggableLabel("oLLdC8JAkhjp9ZmcV4TVDe", vLabel).setCallback(vLabel, onChange).setDragClass(vLabel, '');
+vLabel = sc$("oLLdC8JAkhjp9ZmcV4TVDe_LN3b");
+	this.fLabels.push(vLabel);
+	vLabel.sO=1;
+vLabel.sG=1;
+scDragMgr.makeDraggableLabel("oLLdC8JAkhjp9ZmcV4TVDe", vLabel).setCallback(vLabel, onChange).setDragClass(vLabel, '');
+vLabel = sc$("oLLdC8JAkhjp9ZmcV4TVDe_LN5c");
+	this.fLabels.push(vLabel);
+	vLabel.sO=0;
+vLabel.sG=2;
+scDragMgr.makeDraggableLabel("oLLdC8JAkhjp9ZmcV4TVDe", vLabel).setCallback(vLabel, onChange).setDragClass(vLabel, '');
+vLabel = sc$("oLLdC8JAkhjp9ZmcV4TVDe_LN6b");
+	this.fLabels.push(vLabel);
+	vLabel.sO=1;
+vLabel.sG=2;
+scDragMgr.makeDraggableLabel("oLLdC8JAkhjp9ZmcV4TVDe", vLabel).setCallback(vLabel, onChange).setDragClass(vLabel, '');
+vLabel = sc$("oLLdC8JAkhjp9ZmcV4TVDe_LN8c");
+	this.fLabels.push(vLabel);
+	vLabel.sO=0;
+vLabel.sG=3;
+scDragMgr.makeDraggableLabel("oLLdC8JAkhjp9ZmcV4TVDe", vLabel).setCallback(vLabel, onChange).setDragClass(vLabel, '');
+vLabel = sc$("oLLdC8JAkhjp9ZmcV4TVDe_LN9b");
+	this.fLabels.push(vLabel);
+	vLabel.sO=1;
+vLabel.sG=3;
+scDragMgr.makeDraggableLabel("oLLdC8JAkhjp9ZmcV4TVDe", vLabel).setCallback(vLabel, onChange).setDragClass(vLabel, '');
+vLabel = sc$("oLLdC8JAkhjp9ZmcV4TVDe_LNbc");
+	this.fLabels.push(vLabel);
+	vLabel.sO=0;
+vLabel.sG=4;
+scDragMgr.makeDraggableLabel("oLLdC8JAkhjp9ZmcV4TVDe", vLabel).setCallback(vLabel, onChange).setDragClass(vLabel, '');
+vLabel = sc$("oLLdC8JAkhjp9ZmcV4TVDe_LNcb");
+	this.fLabels.push(vLabel);
+	vLabel.sO=1;
+vLabel.sG=4;
+scDragMgr.makeDraggableLabel("oLLdC8JAkhjp9ZmcV4TVDe", vLabel).setCallback(vLabel, onChange).setDragClass(vLabel, '');
+vLabel = sc$("oLLdC8JAkhjp9ZmcV4TVDe_LNda");
+	this.fLabels.push(vLabel);
+	vLabel.sO=2;
+vLabel.sG=4;
+scDragMgr.makeDraggableLabel("oLLdC8JAkhjp9ZmcV4TVDe", vLabel).setCallback(vLabel, onChange).setDragClass(vLabel, '');
+scDragMgr.makeContainer("oLLdC8JAkhjp9ZmcV4TVDe", sc$("oLLdC8JAkhjp9ZmcV4TVDe_NNf3_N1b"), vC = sc$("oLLdC8JAkhjp9ZmcV4TVDe_NNfa_N1b"), sc$("oLLdC8JAkhjp9ZmcV4TVDe_NNfc_N1b")).setMode(vC, 'append', -1).setDragOverClass(vC, 'ddCatchDragOver');
+scDragMgr.makeContainer("oLLdC8JAkhjp9ZmcV4TVDe", sc$("oLLdC8JAkhjp9ZmcV4TVDe_NNf3_N4b"), vC = sc$("oLLdC8JAkhjp9ZmcV4TVDe_NNfa_N4b"), sc$("oLLdC8JAkhjp9ZmcV4TVDe_NNfc_N4b")).setMode(vC, 'append', -1).setDragOverClass(vC, 'ddCatchDragOver');
+scDragMgr.makeContainer("oLLdC8JAkhjp9ZmcV4TVDe", sc$("oLLdC8JAkhjp9ZmcV4TVDe_NNf3_N7b"), vC = sc$("oLLdC8JAkhjp9ZmcV4TVDe_NNfa_N7b"), sc$("oLLdC8JAkhjp9ZmcV4TVDe_NNfc_N7b")).setMode(vC, 'append', -1).setDragOverClass(vC, 'ddCatchDragOver');
+scDragMgr.makeContainer("oLLdC8JAkhjp9ZmcV4TVDe", sc$("oLLdC8JAkhjp9ZmcV4TVDe_NNf3_Nab"), vC = sc$("oLLdC8JAkhjp9ZmcV4TVDe_NNfa_Nab"), sc$("oLLdC8JAkhjp9ZmcV4TVDe_NNfc_Nab")).setMode(vC, 'append', -1).setDragOverClass(vC, 'ddCatchDragOver');
+this.fGroupsC = [scDragMgr.getContainers("oLLdC8JAkhjp9ZmcV4TVDe", sc$("oLLdC8JAkhjp9ZmcV4TVDe_L")),scDragMgr.getContainers("oLLdC8JAkhjp9ZmcV4TVDe", sc$("oLLdC8JAkhjp9ZmcV4TVDe_RN1b")),scDragMgr.getContainers("oLLdC8JAkhjp9ZmcV4TVDe", sc$("oLLdC8JAkhjp9ZmcV4TVDe_RN4b")),scDragMgr.getContainers("oLLdC8JAkhjp9ZmcV4TVDe", sc$("oLLdC8JAkhjp9ZmcV4TVDe_RN7b")),scDragMgr.getContainers("oLLdC8JAkhjp9ZmcV4TVDe", sc$("oLLdC8JAkhjp9ZmcV4TVDe_RNab"))];
+		for(var i = this.fGroupsC[0].length-1; i >=0; i--) this.fGroupsC[0][i]._Labels = scDragMgr.getLabels(this.fGroupsC[0][i]);
+		this.initSeq(this.getOnLoadSeq()); 
+		var vNodeRoot = sc$("oLLdC8JAkhjp9ZmcV4TVDe_A");
+		vNodeRoot.style.display = "block"; 
+	}catch(e){console.log(e);}
+	},
+	onUnload: function(){
+		this.closeSeq();
+	},
+	loadSortKey: "A",
+	unloadSortKey: "A"
+};
+
+scOnLoads[scOnLoads.length] = oLLdC8JAkhjp9ZmcV4TVDe;
+scOnUnloads[scOnUnloads.length] = oLLdC8JAkhjp9ZmcV4TVDe;
+</script><div id="oLLdC8JAkhjp9ZmcV4TVDe_A" style="display:none;"><div class="bkSolResOut"><div class="bkSolResFra1"><div class="bkSolResFra2"><div class="bkSolResFra3"><div class="bkSolResCo"><div class="btnCorrection"><a role="button" title="Afficher le score et la correction" href="#" onkeydown="scDynUiMgr.handleBtnKeyDwn(event);" onkeyup="scDynUiMgr.handleBtnKeyUp(event);" onclick="oLLdC8JAkhjp9ZmcV4TVDe.onActionN67(this); return false;" class="btnQuiz " id="oLLdC8JAkhjp9ZmcV4TVDe_S_N67"><span class="btnQuizCaption">Correction</span></a></div><div class="btnReset"><a role="button" title="Effacer mes r&eacute;ponses" href="#" onkeydown="scDynUiMgr.handleBtnKeyDwn(event);" onkeyup="scDynUiMgr.handleBtnKeyUp(event);" onclick="oLLdC8JAkhjp9ZmcV4TVDe.onActionN8a(this); return false;" class="btnQuiz "><span class="btnQuizCaption">Recommencer</span></a></div><div class="scoreBox"><div class="score " aria-live="polite" id="oLLdC8JAkhjp9ZmcV4TVDe_N_score"><div id="oLLdC8JAkhjp9ZmcV4TVDe_SNaa"><span></span></div></div></div></div></div></div></div></div><div><div class="headerQ"><div id="oLLdC8JAkhjp9ZmcV4TVDe_N_question" class="question"><div><p class="op_txt_p">S&eacute;lectionne l'information sur la gauche et fait la glisser en-dessous du terme qui correspond.</p><p class="op_txt_p">V&eacute;rifie ensuite ta r&eacute;ponse en cliquant sur le bouton &quot;Correction&quot;.</p></div></div></div><table id="oLLdC8JAkhjp9ZmcV4TVDe_N_" class="mtTable"><tr><td class="mtTdBasket"><div id="oLLdC8JAkhjp9ZmcV4TVDe_L" class="ddBasket "><div id="oLLdC8JAkhjp9ZmcV4TVDe_S_Nd3" class="ddBasketCatch "><div id="oLLdC8JAkhjp9ZmcV4TVDe_S_Nd5" class="ddBasketCont "><div id="oLLdC8JAkhjp9ZmcV4TVDe_LN3b" class="mtLabel "><p class="op_labelTxt_p">Logiciel qui pr&eacute;sente les donn&eacute;es dans des cellules</p></div><div id="oLLdC8JAkhjp9ZmcV4TVDe_LNcb" class="mtLabel "><p class="op_labelTxt_p">Point de d&eacute;part &agrave; un raisonnement</p></div><div id="oLLdC8JAkhjp9ZmcV4TVDe_LNda" class="mtLabel "><p class="op_labelTxt_p">Peuvent &ecirc;tre mises en &eacute;vidence &agrave; l'aide des graphiques</p></div><div id="oLLdC8JAkhjp9ZmcV4TVDe_LN9b" class="mtLabel "><p class="op_labelTxt_p">Il y en a plusieurs dans un classeur</p></div><div id="oLLdC8JAkhjp9ZmcV4TVDe_LN2c" class="mtLabel "><p class="op_labelTxt_p">C'est un type de logiciel</p></div><div id="oLLdC8JAkhjp9ZmcV4TVDe_LNbc" class="mtLabel "><p class="op_labelTxt_p">Information que l'on int&egrave;gre &agrave; une cellule</p></div><div id="oLLdC8JAkhjp9ZmcV4TVDe_LN6b" class="mtLabel "><p class="op_labelTxt_p">Nom du fichier</p></div><div id="oLLdC8JAkhjp9ZmcV4TVDe_LN8c" class="mtLabel "><p class="op_labelTxt_p">Contient 16 384 colonnes et 1 048 576 lignes</p></div><div id="oLLdC8JAkhjp9ZmcV4TVDe_LN5c" class="mtLabel "><p class="op_labelTxt_p">Est constitu&eacute; de feuilles</p></div></div><div id="oLLdC8JAkhjp9ZmcV4TVDe_S_Ne0" class="ddBasketIfEmpty "><span>Plus d'&eacute;l&eacute;ments &agrave; cat&eacute;goriser</span></div><div class="ddBasketEnd"></div></div></div></td><td class="mtTdArrow"></td><td class="mtTdDropCont"><div id="oLLdC8JAkhjp9ZmcV4TVDe_RN1b" class="ddRepArea "><div id="oLLdC8JAkhjp9ZmcV4TVDe_NNf3_N1b" class="ddDropCatch "><div class="ddDropTi"><p class="op_labelTxt_p">Tableur</p></div><div id="oLLdC8JAkhjp9ZmcV4TVDe_NNfa_N1b" class="ddDropCont "></div><div id="oLLdC8JAkhjp9ZmcV4TVDe_NNfc_N1b" class="ddDropContIfEmpty "><span>D&eacute;posez ici</span></div><div class="ddCatchDragEnd"></div></div></div><div id="oLLdC8JAkhjp9ZmcV4TVDe_RN4b" class="ddRepArea "><div id="oLLdC8JAkhjp9ZmcV4TVDe_NNf3_N4b" class="ddDropCatch "><div class="ddDropTi"><p class="op_labelTxt_p">Classeur</p></div><div id="oLLdC8JAkhjp9ZmcV4TVDe_NNfa_N4b" class="ddDropCont "></div><div id="oLLdC8JAkhjp9ZmcV4TVDe_NNfc_N4b" class="ddDropContIfEmpty "><span>D&eacute;posez ici</span></div><div class="ddCatchDragEnd"></div></div></div><div id="oLLdC8JAkhjp9ZmcV4TVDe_RN7b" class="ddRepArea "><div id="oLLdC8JAkhjp9ZmcV4TVDe_NNf3_N7b" class="ddDropCatch "><div class="ddDropTi"><p class="op_labelTxt_p">Feuille</p></div><div id="oLLdC8JAkhjp9ZmcV4TVDe_NNfa_N7b" class="ddDropCont "></div><div id="oLLdC8JAkhjp9ZmcV4TVDe_NNfc_N7b" class="ddDropContIfEmpty "><span>D&eacute;posez ici</span></div><div class="ddCatchDragEnd"></div></div></div><div id="oLLdC8JAkhjp9ZmcV4TVDe_RNab" class="ddRepArea "><div id="oLLdC8JAkhjp9ZmcV4TVDe_NNf3_Nab" class="ddDropCatch "><div class="ddDropTi"><p class="op_labelTxt_p">Donn&eacute;es</p></div><div id="oLLdC8JAkhjp9ZmcV4TVDe_NNfa_Nab" class="ddDropCont "></div><div id="oLLdC8JAkhjp9ZmcV4TVDe_NNfc_Nab" class="ddDropContIfEmpty "><span>D&eacute;posez ici</span></div><div class="ddCatchDragEnd"></div></div></div></td></tr></table></div></div></div></div></div><div id="tplCoSpacer"></div></div></div></div><div id="tplRgt"><hr class="hidden"><a id="navigation" class="accessAnc" name="navigation" href="#navigation"></a><strong class="hidden">Navigation&nbsp;: </strong><a href="2_tableur_26.html" target="_self" class="navBtn prevBtn btnPrv" title="Pr&eacute;c&eacute;dent (Compl&eacute;tons la d&eacute;finition)"><span><img alt="Pr&eacute;c&eacute;dent" src="../skin/img/btn/prev.png" onmouseover="this.src='../skin/img/btn/prevOver.png';" onmouseout="this.src='../skin/img/btn/prev.png';" class="btnImg"><span class="btnLbl">Pr&eacute;c&eacute;dent</span></span></a><span class="hidden"> | </span><a href="2_tableur_3.html" target="_self" class="navBtn nextBtn btnNxt" title="Suivant (D&eacute;couverte du logiciel)"><span><img alt="Suivant" src="../skin/img/btn/next.png" onmouseover="this.src='../skin/img/btn/nextOver.png';" onmouseout="this.src='../skin/img/btn/next.png';" class="btnImg"><span class="btnLbl">Suivant</span></span></a></div><div id="tplBtm"><hr class="hidden"><a id="footer" class="accessAnc" name="footer" href="#footer"></a><span id="tplBtmLeft"><a class="homeBtn " target="_self" href="tableur_web.html" title="Accueil"><span><img alt="Accueil" src="../skin/img/btn/home.png" onmouseover="this.src='../skin/img/btn/homeOver.png';" onmouseout="this.src='../skin/img/btn/home.png';" class="btnImg"><span class="btnLbl">Accueil</span></span></a><span class="hidden"> | </span><a href="#" onclick="window.print();return false;" class="printBtn" title="Imprimer la page"><span><img alt="Imprimer" src="../skin/img/btn/print.png" onmouseover="this.src='../skin/img/btn/printOver.png';" onmouseout="this.src='../skin/img/btn/print.png';" class="btnImg"><span class="btnLbl">Imprimer</span></span></a></span><span id="tplBtmIn"><span class="hidden"> | </span><span class="hidden"> | </span><a id="linkSp" target="_blank" href="http://scenari-platform.org" title="R&eacute;alis&eacute; avec Scenari (nouvelle fen&ecirc;tre)"><span><img alt="R&eacute;alis&eacute; avec Scenari (nouvelle fen&ecirc;tre)" src="../skin/img/struct/scBtn.png"></span></a></span></div></div>
+  <script type="text/JavaScript" src="../skin/js/skin.js"></script>
+  <script type="text/javascript">tplMgr.init();new scSiRuleAutoMarginW("tplCoMarginW","ide:tplCo",true,510,100);new scSiRuleFlexH("tplCoFlexTop","ide:tplCo",true,.3);scCodeMgr.init();outMgr.init("ide:tplMain","ide:tplMnu","ide:tplMnu/des:ul.mnu");scImgMgr.init();</script>
+ </body>
+</html>

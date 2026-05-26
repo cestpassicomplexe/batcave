@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <meta http-equiv="x-ua-compatible" content="IE=EDGE">
+  <title>Logiciel tableur - Exercice&nbsp;: D&eacute;couvre les formats de donn&eacute;es</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="S&eacute;bastien Fasbender ">
+  <meta name="keywords" content>
+  <meta name="date" content="17/02/2016">
+  <link rel="stylesheet" type="text/css" href="../wdgt/scCodeMgr/scCodeMgr.css">
+  <link rel="stylesheet" type="text/css" href="../wdgt/scImgMgr/scImgMgr.css">
+  <script type="text/JavaScript">
+/*0*/ var scServices = {};
+/*1*/ scServices["scLoad"] = {loadFromRoot:function(pUrl){window.location.href="../"+pUrl;}, getPathFromRoot:function(pPath){return "../"+pPath;}, getUrlFromRoot:function(pHref){if(!this.fRootOffset) this.fRootOffset = scCoLib.hrefBase().length-29; return pHref.substring(this.fRootOffset);},getRootUrl:function(){if(!this.fRootUrl) this.fRootUrl = scCoLib.hrefBase().substring(0,scCoLib.hrefBase().length-30); return this.fRootUrl;}};
+</script>
+  <!--[if lt IE 9]><script type="text/JavaScript" src="../wdgt/html5shiv/html5shiv.js"></script><![endif]--><script type="text/JavaScript" src="../lib-sm/scCoLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sm/scPaLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sm/scSiLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sm/scTiLib.js"></script>
+  <script type="text/JavaScript" src="../svc/scorm.js"></script>
+  <script type="text/JavaScript" src="../lib-sm/scMapMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-sm/scDynUiMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-sm/scTooltipMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-sm/scDragMgr.js"></script>
+  <script type="text/JavaScript" src="../lib-sma/scAssmntMgr.js"></script>
+  <script type="text/JavaScript" src="../svc/scSearch/scSearch.js"></script>
+  <script type="text/JavaScript" src="../wdgt/tplMgr/tplMgr.js"></script>
+  <script type="text/JavaScript" src="../wdgt/dynSizes/dynSizes.js"></script>
+  <script type="text/JavaScript" src="../wdgt/outMgr/outMgr.js"></script>
+  <script type="text/JavaScript" src="../wdgt/scCodeMgr/scCodeMgr.js"></script>
+  <script type="text/JavaScript" src="../wdgt/searchMgr/searchMgr.js"></script>
+  <script type="text/JavaScript" src="../wdgt/scImgMgr/scImgMgr.js"></script>
+  <script type="text/JavaScript">
+/*0*/ try{var vCurrDir = scCoLib.hrefBase().substring(0,scCoLib.hrefBase().lastIndexOf("/")+1); if(window.opener && window.opener.location.href.lastIndexOf(vCurrDir, vCurrDir.length)==0 && window.opener.scServices) scServices = window.opener.scServices; else if(window.parent && window.parent.location.href.lastIndexOf(vCurrDir, vCurrDir.length)==0 && window.parent.scServices) scServices = window.parent.scServices;}catch(e){}
+scCodeMgr.registerCode("des:div.code");
+
+scImgMgr.registerGallery("des:div.galFra");
+
+scImgMgr.registerZoom("des:a.imgZoom",{toolbar:1,mag:1,titlePath:"par:/nsi:/chi:span.capTi"});
+
+</script>
+  <meta name="generator" content="SCENARI 4.1.11 / Opale 3.5.016 - http://scenari-platform.org/opale">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="revision" content="2016-10-03 07:56">
+  <link rel="start" href="tableur_web.html" title="Logiciel tableur">
+  <script type="text/JavaScript">
+outMgr.declareOutline("2_tableur.txt");
+	</script>
+  <link type="text/css" rel="stylesheet" href="../skin/css/html.css" media="all">
+  <link type="text/css" rel="stylesheet" href="../skin/css/struct_page.css" media="screen">
+  <link type="text/css" rel="stylesheet" href="../skin/css/buttons.css" media="screen">
+  <link type="text/css" rel="stylesheet" href="../skin/css/mnu_page.css" media="screen">
+  <link type="text/css" rel="stylesheet" href="../skin/css/mnu_child.css" media="screen">
+  <link type="text/css" rel="stylesheet" href="../skin/css/transf.css" media="all">
+  <link type="text/css" rel="stylesheet" href="../skin/css/indexes.css">
+  <link type="text/css" rel="stylesheet" href="../skin/css/assmnt.css">
+  <link type="text/css" rel="stylesheet" href="../skin/css/assmnt_train.css">
+  <link type="text/css" rel="stylesheet" href="../skin/css/sub_windows.css" media="screen">
+  <link type="text/css" rel="stylesheet" href="../skin/css/search.css" media="screen">
+  <!--[if IE]><link type="text/css" rel="stylesheet" href="../skin/css/ie.css" media="screen"/><![endif]-->
+  <!--[if lt IE 7]><link type="text/css" rel="stylesheet" href="../skin/css/ie6_page.css" media="screen"/><link type="text/css" rel="stylesheet" href="../skin/css/ie6_sub_windows.css" media="all"/><![endif]--><link type="text/css" rel="stylesheet" href="../skin/css/print.css" media="print">
+ </head>
+ <body>
+  <div id="tplFra"><div id="tplTop"><ul id="accessibility"><li class="tplWaiContent"><a class="waiBtn contentWaiBtn" href="#content" title="aller au contenu"><span>contenu</span></a></li><li class="tplWaiMenu"><a class="waiBtn menuWaiBtn" href="#menu" title="aller au menu"><span>menu</span></a></li><li class="tplWaiNav"><a class="waiBtn navWaiBtn" href="#navigation" title="aller &agrave; la navigation"><span>navigation</span></a></li><li class="tplWaiTools"><a class="waiBtn toolsWaiBtn" href="#tools" title="aller aux outils"><span>outils</span></a></li><li class="tplWaiFoot"><a class="waiBtn footWaiBtn" href="#footer" title="aller au pied de page"><span>pied de page</span></a></li></ul><noscript>Attention, votre navigateur ne supporte pas le javascript ou celui-ci a &eacute;t&eacute; d&eacute;sactiv&eacute;. Certaines fonctionnalit&eacute;s de ce module sont restreintes.</noscript><h1 id="titleRoot"><span>Logiciel tableur</span></h1></div><div id="tplLft"><hr class="hidden"><a id="tools" class="accessAnc" name="tools" href="#tools"></a><strong class="hidden">Mode&nbsp;: </strong><ul class="mnuMode"><li><span class="playBtnSel"><img alt="Cours" src="../skin/img/btn/playSel.png" class="btnImg"><span class="btnLbl">Cours</span></span></li><li><a class="modeBtn toolsBtn saveBtn " target="_self" href="tableur_web_1.html" title="Outils transverses"><span><img alt="Outils" src="../skin/img/btn/tools.png" onmouseover="this.src='../skin/img/btn/toolsOver.png';" onmouseout="this.src='../skin/img/btn/tools.png';" class="btnImg"><span class="btnLbl">Outils</span></span></a></li></ul></div><div id="tplMain" class="tplMainMnu_open"><div id="tplMnu"><hr class="hidden"><a id="menu" class="accessAnc" name="menu" href="#menu"></a><strong class="hidden">Menu&nbsp;: </strong><div class="mnuBlock"></div><div class="mnuFra"><ul class="mnu mnu_static  mnu_sch_no"><li class="mnu_sel_no mnu_l mnu_dpt_0 mnu_obj"><div class="mnuLbl mnu_sel_no mnu_l mnu_dpt_0 mnu_obj mnu_sch_no" id="2_tableur.html"><a href="2_tableur.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Objectifs</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_1.html"><a href="2_tableur_1.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>D&eacute;finitions</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_3.html"><a href="2_tableur_3.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>D&eacute;couverte du logiciel</span></span></a></div><ul class="mnu_sub mnu_sub_o"><li class="mnu_sel_no mnu_b mnu_dpt_1 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_1 mnu_ueDiv mnu_sch_no" id="2_tableur_4.html"><a href="2_tableur_4.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>L'interface</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_1 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_dpt_1 mnu_ueDiv mnu_sch_no" id="2_tableur_27.html"><a href="2_tableur_27.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Manipulations de base</span></span></a></div><ul class="mnu_sub mnu_sub_o"><li class="mnu_sel_no mnu_l mnu_dpt_2 mnu_intro"><div class="mnuLbl mnu_sel_no mnu_l mnu_dpt_2 mnu_intro mnu_sch_no" id="2_tableur_33.html"><a href="2_tableur_33.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Introduction</span></span></a></div></li><li class="mnu_sel_no mnu_l mnu_dpt_2 mnu_expUc"><div class="mnuLbl mnu_sel_no mnu_l mnu_dpt_2 mnu_expUc mnu_sch_no" id="2_tableur_34.html"><a href="2_tableur_34.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Ouvrir Excel</span></span></a></div></li><li class="mnu_sel_no mnu_l mnu_dpt_2 mnu_expUc"><div class="mnuLbl mnu_sel_no mnu_l mnu_dpt_2 mnu_expUc mnu_sch_no" id="2_tableur_35.html"><a href="2_tableur_35.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Gestion du classeur et des feuilles</span></span></a></div></li><li class="mnu_sel_no mnu_l mnu_dpt_2 mnu_expUc"><div class="mnuLbl mnu_sel_no mnu_l mnu_dpt_2 mnu_expUc mnu_sch_no" id="2_tableur_36.html"><a href="2_tableur_36.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Entrer des donn&eacute;es et &eacute;tirement incr&eacute;mentiel</span></span></a></div></li><li class="mnu_sel_no mnu_l mnu_dpt_2 mnu_expUc"><div class="mnuLbl mnu_sel_no mnu_l mnu_dpt_2 mnu_expUc mnu_sch_no" id="2_tableur_37.html"><a href="2_tableur_37.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Format de donn&eacute;es</span></span></a></div></li><li class="mnu_sel_yes mnu_l mnu_dpt_2 mnu_trainUc"><div class="mnuLbl mnu_sel_yes mnu_l mnu_dpt_2 mnu_trainUc mnu_sch_no" id="quizz02_formatDonnees.html"><span class="mnu_i"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Exercice&nbsp;: D&eacute;couvre les formats de donn&eacute;es</span></span></span></div></li><li class="mnu_sel_no mnu_l mnu_dpt_2 mnu_expUc"><div class="mnuLbl mnu_sel_no mnu_l mnu_dpt_2 mnu_expUc mnu_sch_no" id="2_tableur_38.html"><a href="2_tableur_38.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Utilisation de l'aide</span></span></a></div></li><li class="mnu_sel_no mnu_l mnu_dpt_2 mnu_expUc"><div class="mnuLbl mnu_sel_no mnu_l mnu_dpt_2 mnu_expUc mnu_sch_no" id="2_tableur_39.html"><a href="2_tableur_39.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Moodle&nbsp;: Exercice&nbsp;- Manipulations de base</span></span></a></div></li></ul></li></ul></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_5.html"><a href="2_tableur_5.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>R&eacute;f&eacute;rences de cellules et op&eacute;rations de base</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_7.html"><a href="2_tableur_7.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Fonctions math&eacute;matiques simples</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_9.html"><a href="2_tableur_9.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Mise en page simple</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_11.html"><a href="2_tableur_11.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Op&eacute;rations logiques</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_13.html"><a href="2_tableur_13.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Fonctions logiques</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_15.html"><a href="2_tableur_15.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Tableaux et repr&eacute;sentations graphiques</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_17.html"><a href="2_tableur_17.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Tableaux crois&eacute;s dynamiques</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_19.html"><a href="2_tableur_19.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Fonctions courantes</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_21.html"><a href="2_tableur_21.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Mise en page et impression</span></span></a></div></li><li class="mnu_sel_no mnu_b mnu_dpt_0 mnu_ueDiv"><div class="mnuLbl mnu_sel_no mnu_b mnu_b_c mnu_dpt_0 mnu_ueDiv mnu_sch_no" id="2_tableur_23.html"><a href="2_tableur_23.html" target="_self" class="mnu_i mnu_lnk"><span class="mnu_sch"><span><span class="mnu_cursor"></span>Protection des donn&eacute;es</span></span></a></div></li></ul><script type="text/javascript">scServices.totalPages = 112;</script></div><div id="tplIco"><div class="decoTrainUc"></div></div></div><div id="tplCo"><div class="scroller"><hr class="hidden"><a id="content" class="accessAnc" name="content" href="#content"></a><strong class="hidden">Contenu&nbsp;: </strong><div id="tplCoMarginW" style><div id="tplCoFlexTop"></div><div class="mainContent"><h2 class="mainContent_ti">D&eacute;couvre les formats de donn&eacute;es</h2><p id="noJsWarn">Attention, votre navigateur ne supporte pas le javascript ou celui-ci a &eacute;t&eacute; d&eacute;sactiv&eacute;. Certaines fonctionnalit&eacute;s dynamiques de ce module sont restreintes.</p><script type="text/JavaScript">var vNoJsWarn = scPaLib.findNode("ide:noJsWarn");
+if (vNoJsWarn && vNoJsWarn.parentNode) vNoJsWarn.parentNode.removeChild(vNoJsWarn);
+</script><div class="divQuiz"><script type="text/JavaScript">
+var BqEs3lSUmubFXAytQKPYmj = {
+
+	fId : "BqEs3lSUmubFXAytQKPYmj",
+	fCurSeq : null,
+	initSeq : function(pCodeSeq){
+	try {
+		if(pCodeSeq==null) return;
+		if(this.fCurSeq!=null) this.closeSeq();
+		this.fCurSeq = pCodeSeq;
+		switch(this.fCurSeq) {
+
+		case "play" : {
+		var vForm = document.forms.BqEs3lSUmubFXAytQKPYmj_form;
+		this._Sol = {N2f:{s:[{isMatch:function(pResp){if(typeof pResp == 'undefined') return false; pResp=pResp.toUpperCase(); return 'STANDARD'==pResp || false;}, score:1},null],min:0,max:1},N5a:{s:[{isMatch:function(pResp){if(typeof pResp == 'undefined') return false; pResp=pResp.toUpperCase(); return 'NOMBRE'==pResp || false;}, score:1},null],min:0,max:1},N85:{s:[{isMatch:function(pResp){if(typeof pResp == 'undefined') return false; pResp=pResp.toUpperCase(); return 'DEVISE'==pResp || false;}, score:1},null],min:0,max:1},Nb0:{s:[{isMatch:function(pResp){if(typeof pResp == 'undefined') return false; pResp=pResp.toUpperCase(); return 'COMPTABILITÉ'==pResp || false;}, score:1},null],min:0,max:1},Ndb:{s:[{isMatch:function(pResp){if(typeof pResp == 'undefined') return false; pResp=pResp.toUpperCase(); return 'DATE'==pResp || false;}, score:1},null],min:0,max:1},N106:{s:[{isMatch:function(pResp){if(typeof pResp == 'undefined') return false; pResp=pResp.toUpperCase(); return 'HEURE'==pResp || false;}, score:1},null],min:0,max:1},N131:{s:[{isMatch:function(pResp){if(typeof pResp == 'undefined') return false; pResp=pResp.toUpperCase(); return 'POURCENTAGE'==pResp || false;}, score:1},null],min:0,max:1},N15c:{s:[{isMatch:function(pResp){if(typeof pResp == 'undefined') return false; pResp=pResp.toUpperCase(); return 'FRACTION'==pResp || false;}, score:1},null],min:0,max:1},N187:{s:[{isMatch:function(pResp){if(typeof pResp == 'undefined') return false; pResp=pResp.toUpperCase(); return 'SCIENTIFIQUE'==pResp || false;}, score:1},null],min:0,max:1},N1b2:{s:[{isMatch:function(pResp){if(typeof pResp == 'undefined') return false; pResp=pResp.toUpperCase(); return 'TEXTE'==pResp || false;}, score:1},null],min:0,max:1},N1dd:{s:[{isMatch:function(pResp){if(typeof pResp == 'undefined') return false; pResp=pResp.toUpperCase(); return 'SPÉCIAL'==pResp || false;}, score:1},null],min:0,max:1},N208:{s:[{isMatch:function(pResp){if(typeof pResp == 'undefined') return false; pResp=pResp.toUpperCase(); return 'PERSONNALISÉ'==pResp || false;}, score:1},null],min:0,max:1},_:null};
+		this.getSolIdx = function(pFieldIndex){
+			var vF = this._Sol[pFieldIndex];
+			var vVal = vForm[pFieldIndex].value;
+			for (var i = 0; i < vF.s.length-1; i++) if(vF.s[i].isMatch(vVal)) return i;
+			return -1;
+		};
+		this.getFieldScore = function(pFieldIndex) {
+			var vI = this.getSolIdx(pFieldIndex);
+			if(vI >= 0) return this._Sol[pFieldIndex].s[vI].score;
+			return 0;
+		};
+		this.refreshResultInput = function(pInput){
+			if(this._resultDisplay == "none") pInput.parentNode.className="";
+			else {
+				var vSol = this._Sol[pInput.name];
+				var vRes = Math.round((this.getFieldScore(pInput.name) - vSol.min) / (vSol.max - vSol.min) * 1);
+				pInput.parentNode.className= "assmntResult_" + vRes;
+			}
+		};
+var vLoadRespSession = "";
+
+		for (var i=0; i < vForm.length; i++) {
+			var vFi = vForm.elements[i];
+			this.setInteraction(vFi, "enabled");
+			vFi.value = vLoadRespSession == null ? "" : scServices.assmntMgr.getResponse(this.fId, vLoadRespSession, vFi.name) || "";
+		}
+	this.refreshResult("none");
+
+
+		this.setSolution('collapsed', 'collapsed');
+scAssmntMgr.setMode(sc$("BqEs3lSUmubFXAytQKPYmj_N_score"), "invisible");
+scAssmntMgr.setMode(sc$("BqEs3lSUmubFXAytQKPYmj_N_quest"), "visible");
+scAssmntMgr.setMode(sc$("BqEs3lSUmubFXAytQKPYmj_N_gExpln"), "collapsed");
+scAssmntMgr.setMode(sc$("BqEs3lSUmubFXAytQKPYmj_N_question"), "visible");
+scAssmntMgr.setToggleStatus(sc$("BqEs3lSUmubFXAytQKPYmj_S_N6a"), false);
+var vRespSession = "";
+		if(scServices.assmntMgr.getCompletionStatus(this.fId, vRespSession)=="notAttempt") scServices.assmntMgr.setCompletionStatus(this.fId, vRespSession, "attempt");
+		this.setResp = function(pInput) {
+			scServices.assmntMgr.setResponse(this.fId, vRespSession, pInput.name, pInput.value);
+			this.computeScore();
+			scServices.assmntMgr.commit();
+			this.refreshResultInput(pInput);
+		}				
+
+		this.computeScore = function() {
+
+			this.fMinPts = 0;
+			this.fMaxPts = 0;
+			for(var vF in this._Sol) if(vF!="_") {this.fMinPts += this._Sol[vF].min; this.fMaxPts += this._Sol[vF].max;}
+			this.fScorePts = this.getFieldScore("N2f")+this.getFieldScore("N5a")+this.getFieldScore("N85")+this.getFieldScore("Nb0")+this.getFieldScore("Ndb")+this.getFieldScore("N106")+this.getFieldScore("N131")+this.getFieldScore("N15c")+this.getFieldScore("N187")+this.getFieldScore("N1b2")+this.getFieldScore("N1dd")+this.getFieldScore("N208")+0;
+
+			//alert("score:::::"+this.fMinPts+" - "+this.fScorePts+" - "+this.fMaxPts);
+var vScoreSession = "";
+			if(this.fScorePts != null) scServices.assmntMgr.setPts(this.fId, vScoreSession, this.fMinPts, this.fScorePts, this.fMaxPts);
+
+			this.refreshScoresFeedbacks();
+		}
+
+if(vRespSession != vLoadRespSession) for (var i=0; i < vForm.length; i++) scServices.assmntMgr.setResponse(this.fId, vRespSession, vForm.elements[i].name, vForm.elements[i].value);
+this.computeScore();
+
+		scServices.assmntMgr.commit();
+		break;
+	}
+
+		}
+	}catch(e){alert("failed:::"+e)};
+	},
+	onActionN91 : function(pButton){
+		if(scAssmntMgr.isDisabled(pButton)) return;
+var vSess="";
+scServices.assmntMgr.resetResponses(this.fId, vSess);
+scServices.assmntMgr.setPts(this.fId, vSess, null, null, null); 
+this.initSeq("play");
+
+		scServices.assmntMgr.commit();
+	},
+	onActionN6a : function(pButton){
+		if(scAssmntMgr.isDisabled(pButton)) return;
+		var vIsOn = scAssmntMgr.isToggleOn(pButton);
+		if(vIsOn) {
+scAssmntMgr.setMode(sc$("BqEs3lSUmubFXAytQKPYmj_N_score"), "invisible");
+this.setSolution('collapsed', 'collapsed'); this.refreshResult("none");scAssmntMgr.setMode(sc$("BqEs3lSUmubFXAytQKPYmj_N_gExpln"), "collapsed");
+
+		} else {
+scAssmntMgr.setMode(sc$("BqEs3lSUmubFXAytQKPYmj_N_score"), "visible");
+this.setSolution('collapsed', 'visible'); this.refreshResult("addClass");scAssmntMgr.setMode(sc$("BqEs3lSUmubFXAytQKPYmj_N_gExpln"), "visible");
+
+		}
+		scAssmntMgr.setToggleStatus(pButton, ! vIsOn);
+		scServices.assmntMgr.commit();
+	},
+	fct_play : function(){
+this.initSeq("play");
+
+	},
+	fct_reset : function(){
+var vSess="";
+scServices.assmntMgr.resetResponses(this.fId, vSess);
+scServices.assmntMgr.setPts(this.fId, vSess, null, null, null); 
+this.initSeq("play");
+
+	},
+	fct_displaySol : function(){
+this.setSolution('collapsed', 'visible'); scAssmntMgr.setMode(sc$("BqEs3lSUmubFXAytQKPYmj_N_gExpln"), "visible");
+
+	},
+	fct_cleanSol : function(){
+this.setSolution('collapsed', 'collapsed'); scAssmntMgr.setMode(sc$("BqEs3lSUmubFXAytQKPYmj_N_gExpln"), "collapsed");
+
+	},
+
+	closeSeq: function(){
+		var vForm = document.forms.BqEs3lSUmubFXAytQKPYmj_form;
+		switch(this.fCurSeq) {
+
+	case "play" : {
+
+		break;
+	}
+
+		}
+		this.fCurSeq = null;
+	},
+	getOnLoadSeq:function() {
+
+			return "play";
+
+	return null;
+	},
+
+	refreshScoresFeedbacks : function(){
+		
+
+		var vScoreNode = sc$("BqEs3lSUmubFXAytQKPYmj_SNb1");
+
+		var vScore = (Math.round((this.fScorePts-this.fMinPts) / (this.fMaxPts-this.fMinPts) * 100) * 1)+ 0;
+if(vScore > 99 && true) {
+			vScoreNode.innerHTML = "<span>"  + "Bonne réponse<\/span>";
+			vScoreNode.className = "answBest";
+		} else if(vScore > 49 && vScore <= 99 && true) {
+			vScoreNode.innerHTML = "<span>" + vScore + "% de bonnes réponses<\/span>";
+			vScoreNode.className = "answGood";
+		} else if(vScore > 0 && vScore <= 49 && true) {
+			vScoreNode.innerHTML = "<span>" + vScore + "% de bonnes réponses<\/span>";
+			vScoreNode.className = "answBad";
+		} else if(vScore <= 0 && true) {
+			vScoreNode.innerHTML = "<span>"  + "Mauvaise réponse <\/span>";
+			vScoreNode.className = "answWorst";
+		} else  {
+			vScoreNode.innerHTML = "";
+			vScoreNode.className = "";
+		}
+
+	},
+	setSolution : function(pIfRight, pIfNotBest){
+		for(var vF in this._Sol) if(vF != "_") scAssmntMgr.setMode(sc$("BqEs3lSUmubFXAytQKPYmj_X_"+vF), this.getSolIdx(vF)==0 ? pIfRight || "collapsed" : pIfNotBest || "collapsed");
+	},
+	setInteraction : function(pElt, pMode){
+		if(!pElt) return;
+		switch(pMode) {
+		case "collapsed" :
+			pElt.style.display = "none";
+			if("scSiLib" in window) scSiLib.fireResizedNode(pElt);
+			break;
+		case "invisible" :
+			pElt.style.display = "";
+			pElt.style.visibility = "hidden";
+			if("scSiLib" in window) scSiLib.fireResizedNode(pElt);
+			break;
+		case "enabled" : 
+		case "disabled" : 
+			pElt.disabled = (pMode=="disabled");
+		default :
+			pElt.style.display = "";
+			pElt.style.visibility = "visible";
+			if("scSiLib" in window) scSiLib.fireResizedNode(pElt);
+		}
+	},
+	refreshResult : function(pMode){
+		this._resultDisplay = pMode || "none";
+		var vForm = document.forms.BqEs3lSUmubFXAytQKPYmj_form;
+		for (var i=0; i < vForm.length; i++) this.refreshResultInput(vForm.elements[i]);
+	},
+	onLoad: function(){
+		this.initSeq(this.getOnLoadSeq()); 
+		var vNodeRoot = sc$("BqEs3lSUmubFXAytQKPYmj_A");
+		vNodeRoot.style.display = "block"; 
+	},
+	onUnload: function(){
+		this.closeSeq();
+	},
+	loadSortKey: "A",
+	unloadSortKey: "A"
+};
+
+scOnLoads[scOnLoads.length] = BqEs3lSUmubFXAytQKPYmj;
+scOnUnloads[scOnUnloads.length] = BqEs3lSUmubFXAytQKPYmj;
+</script><div id="BqEs3lSUmubFXAytQKPYmj_A" style="display:none;"><div class="bkSolResOut"><div class="bkSolResFra1"><div class="bkSolResFra2"><div class="bkSolResFra3"><div class="bkSolResCo"><div class="btnCorrection"><a role="button" title="Afficher le score et la correction" href="#" onkeydown="scDynUiMgr.handleBtnKeyDwn(event);" onkeyup="scDynUiMgr.handleBtnKeyUp(event);" onclick="BqEs3lSUmubFXAytQKPYmj.onActionN6a(this); return false;" class="btnQuiz " id="BqEs3lSUmubFXAytQKPYmj_S_N6a"><span class="btnQuizCaption">Correction</span></a></div><div class="btnReset"><a role="button" title="Effacer les r&eacute;ponses" href="#" onkeydown="scDynUiMgr.handleBtnKeyDwn(event);" onkeyup="scDynUiMgr.handleBtnKeyUp(event);" onclick="BqEs3lSUmubFXAytQKPYmj.onActionN91(this); return false;" class="btnQuiz "><span class="btnQuizCaption">Recommencer</span></a></div><div class="scoreBox"><div class="score " aria-live="polite" id="BqEs3lSUmubFXAytQKPYmj_N_score"><div id="BqEs3lSUmubFXAytQKPYmj_SNb1"><span></span></div></div></div></div></div></div></div></div><div class="exo_co"><div id="BqEs3lSUmubFXAytQKPYmj_N_quest" class="headerQ"><div id="BqEs3lSUmubFXAytQKPYmj_N_question" class="question"><div><p class="op_txt_p">D&eacute;couvre &agrave; l'aide du tableau ci-dessous, les diff&eacute;rents formats de donn&eacute;es qui existent.</p><p class="op_txt_p">S&eacute;lectionne dans la liste d&eacute;roulante le nom qui te semble correspondre &agrave; la description du format.</p></div></div></div><form action="javascript:void(0);" name="BqEs3lSUmubFXAytQKPYmj_form" id="BqEs3lSUmubFXAytQKPYmj_form"><table class="op_clozeTxt_tb"><colgroup><col class="op_clozeTxt_tbcl" style="width:339px;width:42.5ch;"><col class="op_clozeTxt_tbcl" style="width:339px;width:42.5ch;"></colgroup><tr class="op_clozeTxt_tbtr"><td class="op_clozeTxt_tbtd"><p class="op_clozeTxt_p"><strong class="op_clozeTxt_is_emp"><span class="op_clozeTxt_tl_gap"><span><select name="N2f" onblur="BqEs3lSUmubFXAytQKPYmj.setResp(this);"><option value><option value="Texte">Texte<option value="Date">Date<option value="Sp&eacute;cial">Sp&eacute;cial<option value="Standard">Standard<option value="Devise">Devise<option value="Comptabilit&eacute;">Comptabilit&eacute;<option value="Personnalis&eacute;">Personnalis&eacute;<option value="Heure">Heure<option value="Pourcentage">Pourcentage<option value="Scientifique">Scientifique<option value="Fraction">Fraction<option value="Nombre">Nombre</select></span><span id="BqEs3lSUmubFXAytQKPYmj_X_N2f" class="gapAnswer "><span>Standard</span></span></span></strong></p></td><td class="op_clozeTxt_tbtd"><p class="op_clozeTxt_p">Format de nombre qu'Excel utilise par d&eacute;faut lorsque vous tapez un nombre. Pour l'essentiel, les nombres mis en forme &agrave; l'aide de ce format s'affichent exactement tels que vous les avez tap&eacute;s.</p></td></tr><tr class="op_clozeTxt_tbtr"><td class="op_clozeTxt_tbtd"><p class="op_clozeTxt_p"><strong class="op_clozeTxt_is_emp"><span class="op_clozeTxt_tl_gap"><span><select name="N5a" onblur="BqEs3lSUmubFXAytQKPYmj.setResp(this);"><option value><option value="Texte">Texte<option value="Date">Date<option value="Sp&eacute;cial">Sp&eacute;cial<option value="Standard">Standard<option value="Devise">Devise<option value="Comptabilit&eacute;">Comptabilit&eacute;<option value="Personnalis&eacute;">Personnalis&eacute;<option value="Heure">Heure<option value="Pourcentage">Pourcentage<option value="Scientifique">Scientifique<option value="Fraction">Fraction<option value="Nombre">Nombre</select></span><span id="BqEs3lSUmubFXAytQKPYmj_X_N5a" class="gapAnswer "><span>Nombre</span></span></span></strong></p></td><td class="op_clozeTxt_tbtd"><p class="op_clozeTxt_p">Format utilis&eacute; pour l'affichage g&eacute;n&eacute;ral des nombres.</p></td></tr><tr class="op_clozeTxt_tbtr"><td class="op_clozeTxt_tbtd"><p class="op_clozeTxt_p"><strong class="op_clozeTxt_is_emp"><span class="op_clozeTxt_tl_gap"><span><select name="N85" onblur="BqEs3lSUmubFXAytQKPYmj.setResp(this);"><option value><option value="Texte">Texte<option value="Date">Date<option value="Sp&eacute;cial">Sp&eacute;cial<option value="Standard">Standard<option value="Devise">Devise<option value="Comptabilit&eacute;">Comptabilit&eacute;<option value="Personnalis&eacute;">Personnalis&eacute;<option value="Heure">Heure<option value="Pourcentage">Pourcentage<option value="Scientifique">Scientifique<option value="Fraction">Fraction<option value="Nombre">Nombre</select></span><span id="BqEs3lSUmubFXAytQKPYmj_X_N85" class="gapAnswer "><span>Devise</span></span></span></strong></p></td><td class="op_clozeTxt_tbtd"><p class="op_clozeTxt_p">Format utilis&eacute; pour les valeurs mon&eacute;taires g&eacute;n&eacute;rales et affiche le symbole de la devise par d&eacute;faut en regard des nombres.</p></td></tr><tr class="op_clozeTxt_tbtr"><td class="op_clozeTxt_tbtd"><p class="op_clozeTxt_p"><strong class="op_clozeTxt_is_emp"><span class="op_clozeTxt_tl_gap"><span><select name="Nb0" onblur="BqEs3lSUmubFXAytQKPYmj.setResp(this);"><option value><option value="Texte">Texte<option value="Date">Date<option value="Sp&eacute;cial">Sp&eacute;cial<option value="Standard">Standard<option value="Devise">Devise<option value="Comptabilit&eacute;">Comptabilit&eacute;<option value="Personnalis&eacute;">Personnalis&eacute;<option value="Heure">Heure<option value="Pourcentage">Pourcentage<option value="Scientifique">Scientifique<option value="Fraction">Fraction<option value="Nombre">Nombre</select></span><span id="BqEs3lSUmubFXAytQKPYmj_X_Nb0" class="gapAnswer "><span>Comptabilit&eacute;</span></span></span></strong></p></td><td class="op_clozeTxt_tbtd"><p class="op_clozeTxt_p">Format &eacute;galement utilis&eacute; pour les valeurs mon&eacute;taires, mais il aligne les symboles des devises et des d&eacute;cimales pour les nombres d'une m&ecirc;me colonne.</p></td></tr><tr class="op_clozeTxt_tbtr"><td class="op_clozeTxt_tbtd"><p class="op_clozeTxt_p"><strong class="op_clozeTxt_is_emp"><span class="op_clozeTxt_tl_gap"><span><select name="Ndb" onblur="BqEs3lSUmubFXAytQKPYmj.setResp(this);"><option value><option value="Texte">Texte<option value="Date">Date<option value="Sp&eacute;cial">Sp&eacute;cial<option value="Standard">Standard<option value="Devise">Devise<option value="Comptabilit&eacute;">Comptabilit&eacute;<option value="Personnalis&eacute;">Personnalis&eacute;<option value="Heure">Heure<option value="Pourcentage">Pourcentage<option value="Scientifique">Scientifique<option value="Fraction">Fraction<option value="Nombre">Nombre</select></span><span id="BqEs3lSUmubFXAytQKPYmj_X_Ndb" class="gapAnswer "><span>Date</span></span></span></strong></p></td><td class="op_clozeTxt_tbtd"><p class="op_clozeTxt_p">Affichage format&eacute; d'une date.</p></td></tr><tr class="op_clozeTxt_tbtr"><td class="op_clozeTxt_tbtd"><p class="op_clozeTxt_p"><strong class="op_clozeTxt_is_emp"><span class="op_clozeTxt_tl_gap"><span><select name="N106" onblur="BqEs3lSUmubFXAytQKPYmj.setResp(this);"><option value><option value="Texte">Texte<option value="Date">Date<option value="Sp&eacute;cial">Sp&eacute;cial<option value="Standard">Standard<option value="Devise">Devise<option value="Comptabilit&eacute;">Comptabilit&eacute;<option value="Personnalis&eacute;">Personnalis&eacute;<option value="Heure">Heure<option value="Pourcentage">Pourcentage<option value="Scientifique">Scientifique<option value="Fraction">Fraction<option value="Nombre">Nombre</select></span><span id="BqEs3lSUmubFXAytQKPYmj_X_N106" class="gapAnswer "><span>Heure</span></span></span></strong></p></td><td class="op_clozeTxt_tbtd"><p class="op_clozeTxt_p">Affichage format&eacute; d'une heure.</p></td></tr><tr class="op_clozeTxt_tbtr"><td class="op_clozeTxt_tbtd"><p class="op_clozeTxt_p"><strong class="op_clozeTxt_is_emp"><span class="op_clozeTxt_tl_gap"><span><select name="N131" onblur="BqEs3lSUmubFXAytQKPYmj.setResp(this);"><option value><option value="Texte">Texte<option value="Date">Date<option value="Sp&eacute;cial">Sp&eacute;cial<option value="Standard">Standard<option value="Devise">Devise<option value="Comptabilit&eacute;">Comptabilit&eacute;<option value="Personnalis&eacute;">Personnalis&eacute;<option value="Heure">Heure<option value="Pourcentage">Pourcentage<option value="Scientifique">Scientifique<option value="Fraction">Fraction<option value="Nombre">Nombre</select></span><span id="BqEs3lSUmubFXAytQKPYmj_X_N131" class="gapAnswer "><span>Pourcentage</span></span></span></strong></p></td><td class="op_clozeTxt_tbtd"><p class="op_clozeTxt_p">Multiplie la valeur de la cellule par 100 et affiche le r&eacute;sultat avec un symbole de pourcentage (%). </p></td></tr><tr class="op_clozeTxt_tbtr"><td class="op_clozeTxt_tbtd"><p class="op_clozeTxt_p"><strong class="op_clozeTxt_is_emp"><span class="op_clozeTxt_tl_gap"><span><select name="N15c" onblur="BqEs3lSUmubFXAytQKPYmj.setResp(this);"><option value><option value="Texte">Texte<option value="Date">Date<option value="Sp&eacute;cial">Sp&eacute;cial<option value="Standard">Standard<option value="Devise">Devise<option value="Comptabilit&eacute;">Comptabilit&eacute;<option value="Personnalis&eacute;">Personnalis&eacute;<option value="Heure">Heure<option value="Pourcentage">Pourcentage<option value="Scientifique">Scientifique<option value="Fraction">Fraction<option value="Nombre">Nombre</select></span><span id="BqEs3lSUmubFXAytQKPYmj_X_N15c" class="gapAnswer "><span>Fraction</span></span></span></strong></p></td><td class="op_clozeTxt_tbtd"><p class="op_clozeTxt_p">Affiche un nombre sous forme de fraction, selon le type de fraction que vous sp&eacute;cifiez.</p></td></tr><tr class="op_clozeTxt_tbtr"><td class="op_clozeTxt_tbtd"><p class="op_clozeTxt_p"><strong class="op_clozeTxt_is_emp"><span class="op_clozeTxt_tl_gap"><span><select name="N187" onblur="BqEs3lSUmubFXAytQKPYmj.setResp(this);"><option value><option value="Texte">Texte<option value="Date">Date<option value="Sp&eacute;cial">Sp&eacute;cial<option value="Standard">Standard<option value="Devise">Devise<option value="Comptabilit&eacute;">Comptabilit&eacute;<option value="Personnalis&eacute;">Personnalis&eacute;<option value="Heure">Heure<option value="Pourcentage">Pourcentage<option value="Scientifique">Scientifique<option value="Fraction">Fraction<option value="Nombre">Nombre</select></span><span id="BqEs3lSUmubFXAytQKPYmj_X_N187" class="gapAnswer "><span>Scientifique</span></span></span></strong></p></td><td class="op_clozeTxt_tbtd"><p class="op_clozeTxt_p">Affiche un nombre de fa&ccedil;on exponentielle, en rempla&ccedil;ant une partie du nombre par E+n, o&ugrave; E (pour Exposant) multiplie le chiffre pr&eacute;c&eacute;dent par 10 &agrave; la puissance n. Par exemple, un format scientifique &agrave; deux d&eacute;cimales affiche 12345678901 sous la forme 1,23E+10, soit 1,23 fois 10 &agrave; la puissance 10.</p></td></tr><tr class="op_clozeTxt_tbtr"><td class="op_clozeTxt_tbtd"><p class="op_clozeTxt_p"><strong class="op_clozeTxt_is_emp"><span class="op_clozeTxt_tl_gap"><span><select name="N1b2" onblur="BqEs3lSUmubFXAytQKPYmj.setResp(this);"><option value><option value="Texte">Texte<option value="Date">Date<option value="Sp&eacute;cial">Sp&eacute;cial<option value="Standard">Standard<option value="Devise">Devise<option value="Comptabilit&eacute;">Comptabilit&eacute;<option value="Personnalis&eacute;">Personnalis&eacute;<option value="Heure">Heure<option value="Pourcentage">Pourcentage<option value="Scientifique">Scientifique<option value="Fraction">Fraction<option value="Nombre">Nombre</select></span><span id="BqEs3lSUmubFXAytQKPYmj_X_N1b2" class="gapAnswer "><span>Texte</span></span></span></strong></p></td><td class="op_clozeTxt_tbtd"><p class="op_clozeTxt_p">Traite le contenu d'une cellule comme du texte et l'affiche exactement comme vous le tapez, m&ecirc;me si vous tapez des chiffres.</p></td></tr><tr class="op_clozeTxt_tbtr"><td class="op_clozeTxt_tbtd"><p class="op_clozeTxt_p"><strong class="op_clozeTxt_is_emp"><span class="op_clozeTxt_tl_gap"><span><select name="N1dd" onblur="BqEs3lSUmubFXAytQKPYmj.setResp(this);"><option value><option value="Texte">Texte<option value="Date">Date<option value="Sp&eacute;cial">Sp&eacute;cial<option value="Standard">Standard<option value="Devise">Devise<option value="Comptabilit&eacute;">Comptabilit&eacute;<option value="Personnalis&eacute;">Personnalis&eacute;<option value="Heure">Heure<option value="Pourcentage">Pourcentage<option value="Scientifique">Scientifique<option value="Fraction">Fraction<option value="Nombre">Nombre</select></span><span id="BqEs3lSUmubFXAytQKPYmj_X_N1dd" class="gapAnswer "><span>Sp&eacute;cial</span></span></span></strong></p></td><td class="op_clozeTxt_tbtd"><p class="op_clozeTxt_p">Permet d'afficher des nombres tels que les codes postaux, des num&eacute;ros de t&eacute;l&eacute;phone ou de s&eacute;curit&eacute; sociale. </p></td></tr><tr class="op_clozeTxt_tbtr"><td class="op_clozeTxt_tbtd"><p class="op_clozeTxt_p"><strong class="op_clozeTxt_is_emp"><span class="op_clozeTxt_tl_gap"><span><select name="N208" onblur="BqEs3lSUmubFXAytQKPYmj.setResp(this);"><option value><option value="Texte">Texte<option value="Date">Date<option value="Sp&eacute;cial">Sp&eacute;cial<option value="Standard">Standard<option value="Devise">Devise<option value="Comptabilit&eacute;">Comptabilit&eacute;<option value="Personnalis&eacute;">Personnalis&eacute;<option value="Heure">Heure<option value="Pourcentage">Pourcentage<option value="Scientifique">Scientifique<option value="Fraction">Fraction<option value="Nombre">Nombre</select></span><span id="BqEs3lSUmubFXAytQKPYmj_X_N208" class="gapAnswer "><span>Personnalis&eacute;</span></span></span></strong></p></td><td class="op_clozeTxt_tbtd"><p class="op_clozeTxt_p">Permet de modifier la copie d'un code de format de nombre. Utilisez ce format pour cr&eacute;er un format de nombre personnalis&eacute; qui est ajout&eacute; &agrave; la liste des codes de formats de nombre.</p></td></tr></table></form></div></div></div></div></div><div id="tplCoSpacer"></div></div></div></div><div id="tplRgt"><hr class="hidden"><a id="navigation" class="accessAnc" name="navigation" href="#navigation"></a><strong class="hidden">Navigation&nbsp;: </strong><a href="2_tableur_37.html" target="_self" class="navBtn prevBtn btnPrv" title="Pr&eacute;c&eacute;dent (Format de donn&eacute;es)"><span><img alt="Pr&eacute;c&eacute;dent" src="../skin/img/btn/prev.png" onmouseover="this.src='../skin/img/btn/prevOver.png';" onmouseout="this.src='../skin/img/btn/prev.png';" class="btnImg"><span class="btnLbl">Pr&eacute;c&eacute;dent</span></span></a><span class="hidden"> | </span><a href="2_tableur_38.html" target="_self" class="navBtn nextBtn btnNxt" title="Suivant (Utilisation de l'aide)"><span><img alt="Suivant" src="../skin/img/btn/next.png" onmouseover="this.src='../skin/img/btn/nextOver.png';" onmouseout="this.src='../skin/img/btn/next.png';" class="btnImg"><span class="btnLbl">Suivant</span></span></a></div><div id="tplBtm"><hr class="hidden"><a id="footer" class="accessAnc" name="footer" href="#footer"></a><span id="tplBtmLeft"><a class="homeBtn " target="_self" href="tableur_web.html" title="Accueil"><span><img alt="Accueil" src="../skin/img/btn/home.png" onmouseover="this.src='../skin/img/btn/homeOver.png';" onmouseout="this.src='../skin/img/btn/home.png';" class="btnImg"><span class="btnLbl">Accueil</span></span></a><span class="hidden"> | </span><a href="#" onclick="window.print();return false;" class="printBtn" title="Imprimer la page"><span><img alt="Imprimer" src="../skin/img/btn/print.png" onmouseover="this.src='../skin/img/btn/printOver.png';" onmouseout="this.src='../skin/img/btn/print.png';" class="btnImg"><span class="btnLbl">Imprimer</span></span></a></span><span id="tplBtmIn"><span class="hidden"> | </span><span class="hidden"> | </span><a id="linkSp" target="_blank" href="http://scenari-platform.org" title="R&eacute;alis&eacute; avec Scenari (nouvelle fen&ecirc;tre)"><span><img alt="R&eacute;alis&eacute; avec Scenari (nouvelle fen&ecirc;tre)" src="../skin/img/struct/scBtn.png"></span></a></span></div></div>
+  <script type="text/JavaScript" src="../skin/js/skin.js"></script>
+  <script type="text/javascript">tplMgr.init();new scSiRuleAutoMarginW("tplCoMarginW","ide:tplCo",true,510,100);new scSiRuleFlexH("tplCoFlexTop","ide:tplCo",true,.3);scCodeMgr.init();outMgr.init("ide:tplMain","ide:tplMnu","ide:tplMnu/des:ul.mnu");scImgMgr.init();</script>
+ </body>
+</html>
